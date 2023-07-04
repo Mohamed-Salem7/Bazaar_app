@@ -22,14 +22,11 @@ class ChooseUserBody extends StatelessWidget {
     return BlocConsumer<AuthCubit, AuthState>(
         listener: (context, state) {},
         builder: (context, state) {
-          var cubit = AuthCubit.get(context);
 
           return Column(
             children: [
-              if (index == 0)
-                ContainerSelectUser(image: image),
-              if (index == 1)
-                ContainerSelectUser(image: image),
+                ContainerSelectUser(image: image, index: index,),
+
               SizedBox(
                 height: 15.h,
               ),

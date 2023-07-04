@@ -8,20 +8,17 @@ class AuthCubit extends Cubit<AuthState> {
 
   static AuthCubit get(context) => BlocProvider.of(context);
 
-  bool changeSelectUserSallers = false;
 
 
-  bool changeSelectUserCustomers = false;
 
-  void changeSelectUserSaller() {
-    changeSelectUserSallers = !changeSelectUserSallers;
+  bool changeSelectUser = false;
+
+  void changeSelectUsers() {
+    changeSelectUser = !changeSelectUser;
     emit(ChangeSelectUserSallerState());
   }
 
-  void changeSelectUserCustomer() {
-    changeSelectUserCustomers = !changeSelectUserCustomers;
-    emit(ChangeSelectUserCustomerState());
-  }
+
 
 
 
