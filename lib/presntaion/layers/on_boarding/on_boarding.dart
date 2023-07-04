@@ -1,5 +1,7 @@
+import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:onboarding/onboarding.dart';
 
 
@@ -17,81 +19,64 @@ class _OnBoardingState extends State<OnBoarding> {
     PageModel(
       widget: DecoratedBox(
         decoration: BoxDecoration(
-          color: background,
+          color: AppColor.white,
           border: Border.all(
             width: 0.0,
             color: background,
           ),
         ),
-        child: SingleChildScrollView(
-          controller: ScrollController(),
-          child: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 45.0,
-                  vertical: 90.0,
+        child: Column(
+          children: [
+            Image.asset(AppImage.onBoarding1,
+              fit: BoxFit.fill,
+              height: 455.h,
+              width: 360.w,
                 ),
-                child: Image.asset(AppImage.onBoarding1,
-                    ),
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 45.0),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'SECURED BACKUP',
-                    style: pageTitleStyle,
-                    textAlign: TextAlign.left,
-                  ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 45.0, vertical: 10.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Keep your files in closed safe so you can\'t lose them. Consider TrueNAS.',
+                  style: pageInfoStyle,
+                  textAlign: TextAlign.left,
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 45.0, vertical: 10.0),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Keep your files in closed safe so you can\'t lose them. Consider TrueNAS.',
-                    style: pageInfoStyle,
-                    textAlign: TextAlign.left,
-                  ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 45.0, vertical: 10.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Keep your files in closed safe so you can\'t lose them. Consider TrueNAS.',
+                  style: pageInfoStyle,
+                  textAlign: TextAlign.left,
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 45.0, vertical: 10.0),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Keep your files in closed safe so you can\'t lose them. Consider TrueNAS.',
-                    style: pageInfoStyle,
-                    textAlign: TextAlign.left,
-                  ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 45.0, vertical: 10.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Keep your files in closed safe so you can\'t lose them. Consider TrueNAS.',
+                  style: pageInfoStyle,
+                  textAlign: TextAlign.left,
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 45.0, vertical: 10.0),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Keep your files in closed safe so you can\'t lose them. Consider TrueNAS.',
-                    style: pageInfoStyle,
-                    textAlign: TextAlign.left,
-                  ),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 45.0, vertical: 10.0),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Keep your files in closed safe so you can\'t lose them. Consider TrueNAS.',
+                  style: pageInfoStyle,
+                  textAlign: TextAlign.left,
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 45.0, vertical: 10.0),
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Keep your files in closed safe so you can\'t lose them. Consider TrueNAS.',
-                    style: pageInfoStyle,
-                    textAlign: TextAlign.left,
-                  ),
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     ),
