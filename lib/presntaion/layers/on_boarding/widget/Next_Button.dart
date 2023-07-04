@@ -10,27 +10,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class NextButton extends StatefulWidget {
+class NextButton extends StatelessWidget {
   const NextButton({Key? key}) : super(key: key);
 
-  @override
-  State<NextButton> createState() => _NextButtonState();
-}
-
-class _NextButtonState extends State<NextButton> {
-
-  @override
-  void initState() {
-    super.initState();
-    AuthCubit.get(context).changePageController();
-
-  }
-
-  @override
-  void dispose() {
-    AuthCubit.get(context).pageController.dispose();
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +28,7 @@ class _NextButtonState extends State<NextButton> {
                     AuthCubit
                         .get(context)
                         .pageController
-                        .nextPage(duration: Duration(milliseconds: 100),
+                        .nextPage(duration: const Duration(milliseconds: 100),
                       curve: Curves.easeIn,);
                   }else{
                     navigatorFinished(context, const DiscoverScreen());
