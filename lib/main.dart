@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
             return const GetMaterialApp(
               title: 'Attendance',
               debugShowCheckedModeBanner: false,
-              home: DiscoverScreen(),
+              home: SplashScreen(),
             );
           }),
     );

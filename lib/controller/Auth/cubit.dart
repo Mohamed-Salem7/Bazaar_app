@@ -20,6 +20,23 @@ class AuthCubit extends Cubit<AuthState> {
 
 
 
+  late PageController pageController;
+
+  void changePageController(){
+    pageController = PageController();
+    emit(ChangePageNumber());
+  }
+
+
+
+
+  int pageNumber = 0;
+  void changePageNumber(index){
+    pageNumber=index;
+    emit(ChangePageNumber());
+  }
+
+
 
 
 }
