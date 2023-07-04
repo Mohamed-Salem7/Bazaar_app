@@ -1,5 +1,6 @@
 import 'package:bazaar/controller/Auth/cubit.dart';
 import 'package:bazaar/controller/Auth/state.dart';
+import 'package:bazaar/presntaion/layers/choose_user/widget/Container_Select_User.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
 import 'package:flutter/material.dart';
@@ -26,58 +27,9 @@ class ChooseUserBody extends StatelessWidget {
           return Column(
             children: [
               if (index == 0)
-                Container(
-                  alignment: Alignment.center,
-                  width: 126.w,
-                  height: 126.h,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(32.r),
-                    color: AppColor.white,
-                    border: Border.fromBorderSide(BorderSide(color: AppColor.mainColor,width: 2.w)),
-                    boxShadow: [
-                      BoxShadow(
-                        color: cubit.changeSelectUserSallers
-                            ? Colors.transparent
-                            : AppColor.black.withOpacity(0.16.spMin),
-                        offset: Offset(0.w, 1.h),
-                        blurRadius: 5.r,
-                      ),
-                    ],
-                  ),
-                  child: Image(
-                    image: AssetImage(
-                      image,
-                    ),
-                    height: 50.h,
-                    width: 50.w,
-                  ),
-                ),
+                ContainerSelectUser(image: image),
               if (index == 1)
-                Container(
-                  alignment: Alignment.center,
-                  width: 126.w,
-                  height: 126.h,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(32.r),
-                    color: AppColor.white,
-                    boxShadow: [
-                      BoxShadow(
-                        color: (cubit.changeSelectUserCustomers)
-                            ? AppColor.mainColor.withOpacity(0.9.spMin)
-                            : AppColor.black.withOpacity(0.16.spMin),
-                        offset: Offset(0.w, 3.h),
-                        blurRadius: 5.r,
-                      ),
-                    ],
-                  ),
-                  child: Image(
-                    image: AssetImage(
-                      image,
-                    ),
-                    height: 50.h,
-                    width: 50.w,
-                  ),
-                ),
+                ContainerSelectUser(image: image),
               SizedBox(
                 height: 15.h,
               ),
