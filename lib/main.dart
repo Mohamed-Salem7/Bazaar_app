@@ -1,3 +1,4 @@
+import 'package:bazaar/controller/Auth/cubit.dart';
 import 'package:bazaar/presntaion/layers/discover/discover_screen.dart';
 import 'package:bazaar/presntaion/layers/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -18,16 +19,21 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-        designSize: const Size(360, 780),
-        minTextAdapt: true,
-        splitScreenMode: true,
-        builder: (context, child) {
-          return const GetMaterialApp(
-            title: 'Attendance',
-            debugShowCheckedModeBanner: false,
-            home: DiscoverScreen(),
-          );
-        });
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => AuthCubit()),
+      ],
+      child: ScreenUtilInit(
+          designSize: const Size(360, 780),
+          minTextAdapt: true,
+          splitScreenMode: true,
+          builder: (context, child) {
+            return const GetMaterialApp(
+              title: 'Attendance',
+              debugShowCheckedModeBanner: false,
+              home: DiscoverScreen(),
+            );
+          }),
+    );
   }
 }
