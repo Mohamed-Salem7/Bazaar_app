@@ -23,6 +23,14 @@ class AuthCubit extends Cubit<AuthState> {
     emit(ChangeSelectUserCustomerState());
   }
 
+  int pageNumber = 0;
+
+  void changePageNumber(index){
+    pageNumber=index;
+    emit(ChangePageNumber());
+  }
+
+
 
 
 }

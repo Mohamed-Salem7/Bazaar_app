@@ -1,13 +1,12 @@
 import 'dart:async';
 
 
-import 'package:bazaar/presntaion/layers/on_boarding/on_boarding.dart';
 import 'package:bazaar/presntaion/layers/splash/widget/splash_icon.dart';
-import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+
+import '../out_bording/main_out_booarding.dart';
 
 
 
@@ -27,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _goNext() {
-    Get.to(const OnBoarding(),transition: Transition.cupertinoDialog,);
+    Get.to(const OutBoardingScreen(),transition: Transition.cupertinoDialog,);
   }
 
   @override

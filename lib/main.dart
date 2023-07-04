@@ -1,5 +1,6 @@
 import 'package:bazaar/controller/Auth/cubit.dart';
 import 'package:bazaar/presntaion/layers/discover/discover_screen.dart';
+import 'package:bazaar/presntaion/layers/out_bording/main_out_booarding.dart';
 import 'package:bazaar/presntaion/layers/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
             return const GetMaterialApp(
               title: 'Attendance',
               debugShowCheckedModeBanner: false,
-              home: DiscoverScreen(),
+              home: OutBoardingScreen(),
             );
           }),
     );
