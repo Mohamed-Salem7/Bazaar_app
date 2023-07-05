@@ -1,6 +1,8 @@
+import 'package:bazaar/presntaion/layers/login/login_screen.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ButtonLogin extends StatelessWidget {
@@ -14,6 +16,7 @@ class ButtonLogin extends StatelessWidget {
           borderRadius: BorderRadius.circular(12.r),
           onTap: ()
           {
+            Get.to(const LoginScreen(),transition: Transition.rightToLeft);
           },
 
           child: Container(
@@ -26,7 +29,7 @@ class ButtonLogin extends StatelessWidget {
             ),
             child: Text(
               'تسجيل دخول',
-              style: GoogleFonts.roboto(
+              style: GoogleFonts.tajawal(
                 fontSize: 14.spMax,
                 color: AppColor.white,
                 letterSpacing: -0.5000000152587891,

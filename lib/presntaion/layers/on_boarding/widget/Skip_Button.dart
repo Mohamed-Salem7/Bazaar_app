@@ -1,5 +1,5 @@
 import 'package:bazaar/presntaion/layers/discover/discover_screen.dart';
-import 'package:bazaar/presntaion/utils/component.dart';
+import 'package:bazaar/presntaion/utils/component/component.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,7 +18,7 @@ class SkipButton extends StatelessWidget {
           },
           child: Text(
             'تخطي',
-            style: GoogleFonts.roboto(
+            style: GoogleFonts.tajawal(
               fontSize: 16.0,
               color: const Color(0xFFA6A6A6),
               letterSpacing: -0.5714285888671875,

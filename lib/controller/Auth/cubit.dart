@@ -19,6 +19,14 @@ class AuthCubit extends Cubit<AuthState> {
   }
 
 
+  bool changePassword = true;
+
+  void changeVisibilityPassword() {
+    changePassword = !changePassword;
+    emit(ChangeVisibilityPasswordState());
+  }
+
+
 
   late PageController pageController;
 

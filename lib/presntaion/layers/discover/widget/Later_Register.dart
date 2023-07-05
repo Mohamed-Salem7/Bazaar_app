@@ -14,7 +14,7 @@ class LaterRegister extends StatelessWidget {
       },
       child: Text(
         'أو\nالتسجيل لاحقا',
-        style: GoogleFonts.roboto(
+        style: GoogleFonts.tajawal(
           fontSize: 16.spMin,
           color: const Color(0xFFA6A6A6),
           letterSpacing: -0.5714285888671875.spMin,

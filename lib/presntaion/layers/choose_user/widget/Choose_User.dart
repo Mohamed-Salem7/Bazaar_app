@@ -32,7 +32,7 @@ class ChooseUserBody extends StatelessWidget {
               ),
               Text(
                 title,
-                style: GoogleFonts.roboto(
+                style: GoogleFonts.tajawal(
                   fontSize: 24.0.spMin,
                   color: AppColor.black,
                   letterSpacing: -0.8571428833007813.spMin,

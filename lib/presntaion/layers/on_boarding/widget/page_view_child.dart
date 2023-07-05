@@ -60,7 +60,7 @@ class PageViewChild extends StatelessWidget {
                     children: [
                       Text(
                         text,
-                        style: GoogleFonts.roboto(
+                        style: GoogleFonts.tajawal(
                           fontSize: 22.0.spMin,
                           color: Colors.black,
                           letterSpacing: 0.2652941398620605.spMin,
@@ -78,7 +78,7 @@ class PageViewChild extends StatelessWidget {
                   padding:  EdgeInsets.symmetric(horizontal: 10.w),
                   child: Text(
                     secondText,
-                    style: GoogleFonts.roboto(
+                    style: GoogleFonts.tajawal(
                       fontSize: 14.0.spMin,
                       color: Colors.black,
                       letterSpacing: 0.16882354354858398.spMin,
