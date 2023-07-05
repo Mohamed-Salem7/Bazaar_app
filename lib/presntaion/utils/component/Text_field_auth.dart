@@ -1,18 +1,25 @@
 import 'package:bazaar/controller/Auth/cubit.dart';
 import 'package:bazaar/controller/Auth/state.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
+import 'package:bazaar/presntaion/utils/App_Image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TextFieldAuth extends StatelessWidget {
-  TextFieldAuth({Key? key, required this.isPassword, required this.title, this.icon, required this.textInputType}) : super(key: key);
+  TextFieldAuth(
+      {Key? key,
+      required this.isPassword,
+      required this.title,
+      this.icon,
+      required this.textInputType})
+      : super(key: key);
 
   final bool isPassword;
 
   final String title;
-  IconData? icon;
+  String? icon;
   final TextInputType textInputType;
 
   @override
@@ -46,24 +53,25 @@ class TextFieldAuth extends StatelessWidget {
               decoration: InputDecoration(
                 suffixIcon: isPassword
                     ? (IconButton(
-                        onPressed: ()
-                        {
+                        onPressed: () {
                           cubit.changeVisibilityPassword();
                         },
-                        icon: cubit.changePassword ? Icon(
-                          Icons.visibility_outlined,
-                          size: 27.spMin,
-                          color: AppColor.mainColor,
-                        ) : Icon(
-                          Icons.visibility_off_outlined,
-                          size: 27.spMin,
-                          color: AppColor.mainColor,
-                        ),
+                        icon: cubit.changePassword
+                            ? Image(
+                                image: const AssetImage(AppImage.visibilityImg),
+                                width: 14.w,
+                                height: 12.h,
+                              )
+                            : Icon(
+                                Icons.visibility_off_outlined,
+                                size: 18.spMin,
+                                color: AppColor.mainColor,
+                              ),
                       ))
-                    : Icon(
-                        icon,
-                        size: 27.spMin,
-                        color: AppColor.mainColor,
+                    : Image(
+                        image: AssetImage(icon!),
+                        width: 14.w,
+                        height: 12.h,
                       ),
                 border: InputBorder.none,
                 contentPadding: EdgeInsets.symmetric(horizontal: 8.w),

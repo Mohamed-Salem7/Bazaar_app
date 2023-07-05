@@ -17,7 +17,7 @@ class ButtonRegister extends StatelessWidget {
           borderRadius: BorderRadius.circular(12.r),
           onTap: ()
           {
-            Get.to(const  RegisterScreen()/*ChooseUser()*/,transition: Transition.rightToLeft);
+            Get.to(const ChooseUser(),transition: Transition.rightToLeft);
           },
           child: Container(
             alignment: Alignment(0.w, 0.03.h),

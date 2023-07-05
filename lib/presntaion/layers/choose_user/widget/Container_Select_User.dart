@@ -28,13 +28,13 @@ class ContainerSelectUser extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(32.r),
                     color: AppColor.white,
-                    border: cubit.changeSelectUser
+                    border: cubit.changeSelectUserSeller
                         ? Border.fromBorderSide(
                             BorderSide(color: AppColor.mainColor, width: 2.w))
                         : null,
                     boxShadow: [
                       BoxShadow(
-                        color: cubit.changeSelectUser
+                        color: cubit.changeSelectUserSeller
                             ? Colors.transparent
                             : AppColor.black.withOpacity(0.16.spMin),
                         offset: Offset(0.w, 1.h),
@@ -58,13 +58,13 @@ class ContainerSelectUser extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(32.r),
                     color: AppColor.white,
-                    border: !cubit.changeSelectUser
+                    border: cubit.changeSelectUserCustomer
                         ? Border.fromBorderSide(
                             BorderSide(color: AppColor.mainColor, width: 2.w))
                         : null,
                     boxShadow: [
                       BoxShadow(
-                        color: !cubit.changeSelectUser
+                        color: !cubit.changeSelectUserCustomer
                             ? Colors.transparent
                             : AppColor.black.withOpacity(0.16.spMin),
                         offset: Offset(0.w, 1.h),
@@ -80,7 +80,8 @@ class ContainerSelectUser extends StatelessWidget {
                     width: 50.w,
                   ),
                 ),
-              if ((cubit.changeSelectUser && index ==0) ||(!cubit.changeSelectUser && index ==1) )
+
+              if ((cubit.changeSelectUserSeller && index == 0) || (cubit.changeSelectUserCustomer && index == 1))
                 PositionedDirectional(
                   start: 105.w,
                   child: CircleAvatar(

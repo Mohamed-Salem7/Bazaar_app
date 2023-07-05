@@ -1,3 +1,4 @@
+import 'package:bazaar/presntaion/layers/Authnication/widget/Title_Widget.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/component/Main_Button.dart';
 import 'package:flutter/material.dart';
@@ -16,36 +17,7 @@ class RulesScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
           child: Column(
             children: [
-              SizedBox(
-                height: 20.h,
-              ),
-              Row(
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    icon: const Icon(
-                      Icons.arrow_back_ios,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 60.w,
-                  ),
-                  Center(
-                    child: Text(
-                      'الأحكام و الشروط',
-                      style: GoogleFonts.tajawal(
-                        fontSize: 16.spMax,
-                        color: AppColor.black,
-                        letterSpacing: -0.5714285888671875.spMin,
-                        height: 2.19.h,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ],
-              ),
+              const TitleWidget(title: 'الأحكام و الشروط'),
               SizedBox(
                 height: 569.h,
                 child: SingleChildScrollView(
@@ -65,7 +37,10 @@ class RulesScreen extends StatelessWidget {
               SizedBox(
                 height: 20.h,
               ),
-              MainButton(title: 'أوافق', function: () {}),
+              MainButton(title: 'أوافق', function: ()
+              {
+                Navigator.pop(context);
+              }),
             ],
           ),
         ),

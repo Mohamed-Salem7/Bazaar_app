@@ -25,8 +25,7 @@ class ChooseUserBody extends StatelessWidget {
 
           return Column(
             children: [
-                ContainerSelectUser(image: image, index: index,),
-
+              ContainerSelectUser(image: image, index: index,),
               SizedBox(
                 height: 15.h,
               ),

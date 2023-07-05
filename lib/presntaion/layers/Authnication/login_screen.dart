@@ -3,7 +3,7 @@ import 'package:bazaar/controller/Auth/state.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/Divider.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/New_Account.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/Social_Account.dart';
-import 'package:bazaar/presntaion/layers/Authnication/widget/email_image.dart';
+import 'package:bazaar/presntaion/layers/Authnication/widget/LogoAuth.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/forget_widget.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/login_text.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
@@ -40,7 +40,7 @@ class LoginScreen extends StatelessWidget {
                       isPassword: false,
                       textInputType: TextInputType.emailAddress,
                       title: 'البريد الإلكتروني',
-                      icon: Icons.email_outlined,
+                      icon: AppImage.emailImg,
                     ),
                     SizedBox(
                       height: 15.h,

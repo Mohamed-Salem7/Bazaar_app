@@ -11,11 +11,18 @@ class AuthCubit extends Cubit<AuthState> {
 
 
 
-  bool changeSelectUser = false;
+  bool changeSelectUserSeller = false;
+  bool changeSelectUserCustomer = false;
 
-  void changeSelectUsers() {
-    changeSelectUser = !changeSelectUser;
+  void changeSelectUserSellers() {
+    changeSelectUserSeller = !changeSelectUserSeller;
     emit(ChangeSelectUserSallerState());
+  }
+
+
+  void changeSelectUserCustomers() {
+    changeSelectUserCustomer = !changeSelectUserCustomer;
+    emit(ChangeSelectUserCustomerState());
   }
 
 

@@ -1,5 +1,6 @@
 import 'package:bazaar/controller/Auth/cubit.dart';
 import 'package:bazaar/controller/Auth/state.dart';
+import 'package:bazaar/presntaion/layers/Authnication/register_screen.dart';
 import 'package:bazaar/presntaion/layers/choose_user/widget/Choose_User.dart';
 import 'package:bazaar/presntaion/layers/choose_user/widget/Text_user.dart';
 import 'package:bazaar/presntaion/layers/choose_user/widget/background_bottom_image.dart';
@@ -8,6 +9,7 @@ import 'package:bazaar/presntaion/utils/App_Image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class ChooseUser extends StatelessWidget {
   const ChooseUser({Key? key}) : super(key: key);
@@ -45,7 +47,16 @@ class ChooseUser extends StatelessWidget {
                           padding: EdgeInsets.symmetric(horizontal: 20.w),
                           child: GestureDetector(
                             onTap: () {
-                              cubit.changeSelectUsers();
+                              if (index == 0) cubit.changeSelectUserSellers();
+                              if (index == 1) cubit.changeSelectUserCustomers();
+
+
+                              if((cubit.changeSelectUserCustomer && !cubit.changeSelectUserSeller) || (!cubit.changeSelectUserCustomer && cubit.changeSelectUserSeller))
+                              {
+                                Get.back();
+                                Get.to(const  RegisterScreen());
+                              }
+
                             },
                             child: ChooseUserBody(
                               title: title[index],

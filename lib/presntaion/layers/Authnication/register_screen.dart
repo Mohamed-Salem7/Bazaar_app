@@ -4,7 +4,7 @@ import 'package:bazaar/presntaion/layers/Authnication/widget/Divider.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/New_Account.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/Rules_Widget.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/Social_Account.dart';
-import 'package:bazaar/presntaion/layers/Authnication/widget/email_image.dart';
+import 'package:bazaar/presntaion/layers/Authnication/widget/LogoAuth.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/forget_widget.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/login_text.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
@@ -28,6 +28,9 @@ class RegisterScreen extends StatelessWidget {
           AppImage.googleImg,
           AppImage.facebookImg
         ];
+
+        AuthCubit.get(context).changeSelectUserSeller = false;
+        AuthCubit.get(context).changeSelectUserCustomer = false;
         return Directionality(
           textDirection: TextDirection.rtl,
           child: Scaffold(
@@ -43,7 +46,7 @@ class RegisterScreen extends StatelessWidget {
                       isPassword: false,
                       textInputType: TextInputType.name,
                       title: 'الإسم',
-                      icon: Icons.person,
+                      icon: AppImage.personImg,
                     ),
                     SizedBox(
                       height: 15.h,
@@ -52,7 +55,7 @@ class RegisterScreen extends StatelessWidget {
                       isPassword: false,
                       textInputType: TextInputType.emailAddress,
                       title: 'البريد الإلكتروني',
-                      icon: Icons.email_outlined,
+                      icon: AppImage.emailImg,
                     ),
                     SizedBox(
                       height: 15.h,
@@ -69,7 +72,7 @@ class RegisterScreen extends StatelessWidget {
                       isPassword: false,
                       textInputType: TextInputType.phone,
                       title: 'رقم الجوال',
-                      icon: Icons.phone,
+                      icon: AppImage.phoneImg,
                     ),
                     SizedBox(
                       height: 30.h,
