@@ -16,35 +16,28 @@ class MainButton extends StatelessWidget {
     return  BlocConsumer<AuthCubit, AuthState>(
         listener: (context, state) {},
         builder: (context, state) {
-          return Column(
-            children: [
-              InkWell(
-                borderRadius: BorderRadius.circular(12.r),
-                onTap: function,
-                child: Container(
-                  alignment: Alignment(0.0.w, 0.03.h),
-                  width: 306.0.w,
-                  height: 50.0.h,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12.0.r),
-                    color: AppColor.mainColor,
-                  ),
-                  child: Text(
-                    title,
-                    style: GoogleFonts.tajawal(
-                      fontSize: 14.0.spMin,
-                      color: AppColor.white,
-                      letterSpacing: -0.5000000152587891.spMin,
-                      height: 1.36.h,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
+          return InkWell(
+            borderRadius: BorderRadius.circular(12.r),
+            onTap: function,
+            child: Container(
+              alignment: Alignment(0.0.w, 0.03.h),
+              width: 306.0.w,
+              height: 50.0.h,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12.0.r),
+                color: AppColor.mainColor,
+              ),
+              child: Text(
+                title,
+                style: GoogleFonts.tajawal(
+                  fontSize: 14.0.spMin,
+                  color: AppColor.white,
+                  letterSpacing: -0.5000000152587891.spMin,
+                  height: 1.36.h,
                 ),
+                textAlign: TextAlign.center,
               ),
-              SizedBox(
-                height: 70.h,
-              ),
-            ],
+            ),
           );
         });;
   }

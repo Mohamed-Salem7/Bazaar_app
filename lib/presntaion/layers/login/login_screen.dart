@@ -1,7 +1,10 @@
 import 'package:bazaar/controller/Auth/cubit.dart';
 import 'package:bazaar/controller/Auth/state.dart';
 import 'package:bazaar/presntaion/layers/choose_user/widget/logo_choose_user.dart';
+import 'package:bazaar/presntaion/layers/login/widget/New_Account.dart';
 import 'package:bazaar/presntaion/layers/login/widget/email_image.dart';
+import 'package:bazaar/presntaion/layers/login/widget/forget_widget.dart';
+import 'package:bazaar/presntaion/layers/login/widget/login_text.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
 import 'package:bazaar/presntaion/utils/component/Main_Button.dart';
@@ -37,25 +40,10 @@ class LoginScreen extends StatelessWidget {
                       height: 69.h,
                     ),
                   ),
-                  SizedBox(
-                    height: 20.h,
-                  ),
-                  Text(
-                    'تسجيل دخول',
-                    style: GoogleFonts.tajawal(
-                      fontSize: 16.0.spMin,
-                      color: AppColor.black,
-                      letterSpacing: -0.5714285888671875.spMin,
-                      height: 1.19.h,
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
-                  SizedBox(
-                    height: 20.h,
-                  ),
+                  const LoginText(),
                   const TextFieldAuth(isPassword: false),
                   SizedBox(
-                    height: 10.h,
+                    height: 15.h,
                   ),
                   const TextFieldAuth(isPassword: true),
                   SizedBox(
@@ -65,6 +53,8 @@ class LoginScreen extends StatelessWidget {
                     title: 'تسجيل الدخول',
                     function: () {},
                   ),
+                  const ForgetWidget(),
+                  const NewAccountWidget(),
                 ],
               ),
             ),
