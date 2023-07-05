@@ -1,4 +1,5 @@
 import 'package:bazaar/presntaion/layers/choose_user/choose_user_screen.dart';
+import 'package:bazaar/presntaion/layers/register/register_screen.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,7 +17,7 @@ class ButtonRegister extends StatelessWidget {
           borderRadius: BorderRadius.circular(12.r),
           onTap: ()
           {
-            Get.to(ChooseUser(),transition: Transition.circularReveal);
+            Get.to(const  RegisterScreen()/*ChooseUser()*/,transition: Transition.rightToLeft);
           },
           child: Container(
             alignment: Alignment(0.w, 0.03.h),
@@ -31,7 +32,7 @@ class ButtonRegister extends StatelessWidget {
             ),
             child: Text(
               'حساب جديد',
-              style: GoogleFonts.roboto(
+              style: GoogleFonts.tajawal(
                 fontSize: 14.spMax,
                 color: AppColor.mainColor,
                 letterSpacing: -0.5000000152587891.spMin,

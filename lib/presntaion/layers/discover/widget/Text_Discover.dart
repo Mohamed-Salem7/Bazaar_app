@@ -15,7 +15,7 @@ class TextDiscover extends StatelessWidget {
         ),
         Text(
           'اكتشف الجديد\nتمتع بأفضل العروض',
-          style: GoogleFonts.roboto(
+          style: GoogleFonts.tajawal(
             fontSize: 22.0,
             color: AppColor.black,
             letterSpacing: -0.7857143096923829,

@@ -45,8 +45,7 @@ class ChooseUser extends StatelessWidget {
                           padding: EdgeInsets.symmetric(horizontal: 20.w),
                           child: GestureDetector(
                             onTap: () {
-                              if (index == 0) cubit.changeSelectUserSaller();
-                              if (index == 1) cubit.changeSelectUserCustomer();
+                              cubit.changeSelectUsers();
                             },
                             child: ChooseUserBody(
                               title: title[index],

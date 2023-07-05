@@ -3,26 +3,28 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class TextUser extends StatelessWidget {
-  const TextUser({Key? key}) : super(key: key);
+class LoginText extends StatelessWidget {
+  const LoginText({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(
+          height: 20.h,
+        ),
         Text(
-          'اختر المستخدم',
+          'تسجيل دخول',
           style: GoogleFonts.tajawal(
-            fontSize: 24.0.spMax,
+            fontSize: 16.0.spMin,
             color: AppColor.black,
-            letterSpacing: -0.8571428833007813.spMin,
-            fontWeight: FontWeight.w500,
-            height: 0.79.h,
+            letterSpacing: -0.5714285888671875.spMin,
+            height: 1.19.h,
           ),
           textAlign: TextAlign.center,
         ),
         SizedBox(
-          height: 30.h,
+          height: 20.h,
         ),
       ],
     );

@@ -1,7 +1,5 @@
 import 'package:bazaar/controller/Auth/cubit.dart';
 import 'package:bazaar/controller/Auth/state.dart';
-import 'package:bazaar/presntaion/utils/App_Color.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -41,7 +39,7 @@ class PageViewChild extends StatelessWidget {
                         children: [
                           Indicator(
                             margin: 13.w,
-                            selected: AuthCubit.get(context).pageNumber == 2,
+                            selected: AuthCubit.get(context).pageNumber == 0,
                           ),
                           Indicator(
                             margin: 13.w,
@@ -49,7 +47,7 @@ class PageViewChild extends StatelessWidget {
                           ),
                           Indicator(
                             margin: 13.w,
-                            selected: AuthCubit.get(context).pageNumber == 0,
+                            selected: AuthCubit.get(context).pageNumber == 2,
                           ),
                         ],
                       );
@@ -62,7 +60,7 @@ class PageViewChild extends StatelessWidget {
                     children: [
                       Text(
                         text,
-                        style: GoogleFonts.roboto(
+                        style: GoogleFonts.tajawal(
                           fontSize: 22.0.spMin,
                           color: Colors.black,
                           letterSpacing: 0.2652941398620605.spMin,
@@ -80,7 +78,7 @@ class PageViewChild extends StatelessWidget {
                   padding:  EdgeInsets.symmetric(horizontal: 10.w),
                   child: Text(
                     secondText,
-                    style: GoogleFonts.roboto(
+                    style: GoogleFonts.tajawal(
                       fontSize: 14.0.spMin,
                       color: Colors.black,
                       letterSpacing: 0.16882354354858398.spMin,
