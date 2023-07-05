@@ -1,10 +1,14 @@
+import 'package:bazaar/presntaion/layers/Authnication/register_screen.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NewAccountWidget extends StatelessWidget {
-  const NewAccountWidget({Key? key}) : super(key: key);
+  const NewAccountWidget({Key? key, required this.isLogin}) : super(key: key);
+
+  final bool isLogin;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +16,7 @@ class NewAccountWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'ليس لديك حساب ؟ ',
+           isLogin ?  'ليس لديك حساب ؟ ' : 'لديك حساب بالفعل ؟',
           style: GoogleFonts.tajawal(
             fontSize: 14.0.sp,
             color: AppColor.black,
@@ -21,12 +25,15 @@ class NewAccountWidget extends StatelessWidget {
           ),
         ),
         TextButton(
-          onPressed: () {},
+          onPressed: ()
+          {
+            Get.to(const RegisterScreen(),transition: Transition.rightToLeft);
+          },
           child: Text(
-            'إنشاء حساب',
+            isLogin ?  'إنشاء حساب' : 'تسجيل دخول',
             style: GoogleFonts.tajawal(
               fontSize: 14.0.sp,
-              color: AppColor.black,
+              color: isLogin ? AppColor.black : AppColor.mainColor,
               fontWeight: FontWeight.w500,
               letterSpacing: -0.5000000152587891.spMin,
               height: 1.36.h,

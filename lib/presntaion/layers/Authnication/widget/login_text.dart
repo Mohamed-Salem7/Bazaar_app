@@ -4,8 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LoginText extends StatelessWidget {
-  const LoginText({Key? key}) : super(key: key);
+  const LoginText({Key? key, required this.title}) : super(key: key);
 
+  final String title;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -14,7 +15,7 @@ class LoginText extends StatelessWidget {
           height: 20.h,
         ),
         Text(
-          'تسجيل دخول',
+          title,
           style: GoogleFonts.tajawal(
             fontSize: 16.0.spMin,
             color: AppColor.black,

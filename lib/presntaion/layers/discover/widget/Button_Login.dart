@@ -1,4 +1,4 @@
-import 'package:bazaar/presntaion/layers/login/login_screen.dart';
+import 'package:bazaar/presntaion/layers/Authnication/login_screen.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

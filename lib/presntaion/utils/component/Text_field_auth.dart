@@ -7,9 +7,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TextFieldAuth extends StatelessWidget {
-  const TextFieldAuth({Key? key, required this.isPassword}) : super(key: key);
+  TextFieldAuth({Key? key, required this.isPassword, required this.title, this.icon, required this.textInputType}) : super(key: key);
 
   final bool isPassword;
+
+  final String title;
+  IconData? icon;
+  final TextInputType textInputType;
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +42,7 @@ class TextFieldAuth extends StatelessWidget {
               onTap: () {},
               cursorColor: AppColor.mainColor,
               obscureText: isPassword ? (cubit.changePassword) : false,
-              keyboardType: TextInputType.emailAddress,
+              keyboardType: textInputType,
               decoration: InputDecoration(
                 suffixIcon: isPassword
                     ? (IconButton(
@@ -57,14 +61,14 @@ class TextFieldAuth extends StatelessWidget {
                         ),
                       ))
                     : Icon(
-                        Icons.email_outlined,
+                        icon,
                         size: 27.spMin,
                         color: AppColor.mainColor,
                       ),
                 border: InputBorder.none,
                 contentPadding: EdgeInsets.symmetric(horizontal: 8.w),
                 label: Text(
-                  isPassword ? 'كلمة المرور' : 'البريد الإلكتروني',
+                  title,
                   style: GoogleFonts.tajawal(
                     fontSize: 14.0.spMin,
                     color: AppColor.black2,

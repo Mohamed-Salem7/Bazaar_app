@@ -1,5 +1,5 @@
 import 'package:bazaar/presntaion/layers/choose_user/choose_user_screen.dart';
-import 'package:bazaar/presntaion/layers/register/register_screen.dart';
+import 'package:bazaar/presntaion/layers/Authnication/register_screen.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
