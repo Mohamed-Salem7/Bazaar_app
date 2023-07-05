@@ -6,6 +6,9 @@ class AppImage {
   static const String customerImg = '$imgPath/customer.png';
   static const String sallerImg = '$imgPath/saller.png';
   static const String emailImg = '$imgPath/email.png';
+  static const String twitterImg = '$imgPath/twitter.png';
+  static const String googleImg = '$imgPath/google.png';
+  static const String facebookImg = '$imgPath/facebook.png';
   static const String backgroundImg = '$imgPath/background.png';
   static const String background2Img = '$imgPath/background2.png';
   static const String onBoarding1 = '$imgPath/onboarding1.png';

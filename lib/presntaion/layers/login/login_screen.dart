@@ -1,7 +1,9 @@
 import 'package:bazaar/controller/Auth/cubit.dart';
 import 'package:bazaar/controller/Auth/state.dart';
 import 'package:bazaar/presntaion/layers/choose_user/widget/logo_choose_user.dart';
+import 'package:bazaar/presntaion/layers/login/widget/Divider.dart';
 import 'package:bazaar/presntaion/layers/login/widget/New_Account.dart';
+import 'package:bazaar/presntaion/layers/login/widget/Social_Account.dart';
 import 'package:bazaar/presntaion/layers/login/widget/email_image.dart';
 import 'package:bazaar/presntaion/layers/login/widget/forget_widget.dart';
 import 'package:bazaar/presntaion/layers/login/widget/login_text.dart';
@@ -21,6 +23,8 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(
       builder: (context, state) {
+
+        List<String> images =[AppImage.twitterImg,AppImage.googleImg,AppImage.facebookImg];
         return Directionality(
           textDirection: TextDirection.rtl,
           child: Scaffold(
@@ -55,6 +59,30 @@ class LoginScreen extends StatelessWidget {
                   ),
                   const ForgetWidget(),
                   const NewAccountWidget(),
+                  SizedBox(
+                    height: 20.h,
+                  ),
+                  const DividerLogin(),
+                  SizedBox(
+                    height: 35.h,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        width: 191.w,
+                        height: 39.h,
+                        child: ListView.separated(
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            return SocialAccount(image: images[index]);
+                          },
+                          separatorBuilder: (context,index) => SizedBox(width: 10.w,),
+                          itemCount: 3,
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
