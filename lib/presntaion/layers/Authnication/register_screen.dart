@@ -1,5 +1,6 @@
 import 'package:bazaar/controller/Auth/cubit.dart';
 import 'package:bazaar/controller/Auth/state.dart';
+import 'package:bazaar/presntaion/layers/Authnication/join_store_screen.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/Divider.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/New_Account.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/Rules_Widget.dart';
@@ -14,10 +15,13 @@ import 'package:bazaar/presntaion/utils/component/Text_field_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({Key? key}) : super(key: key);
+  const RegisterScreen({Key? key, required this.isSeller}) : super(key: key);
+
+  final bool isSeller;
 
   @override
   Widget build(BuildContext context) {
@@ -29,8 +33,6 @@ class RegisterScreen extends StatelessWidget {
           AppImage.facebookImg
         ];
 
-        AuthCubit.get(context).changeSelectUserSeller = false;
-        AuthCubit.get(context).changeSelectUserCustomer = false;
         return Directionality(
           textDirection: TextDirection.rtl,
           child: Scaffold(
@@ -41,7 +43,7 @@ class RegisterScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     const LogoAuth(),
-                    const LoginText(title: 'تسجيل'),
+                    LoginText(title: isSeller ? 'إنضم كمتجر' : 'تسجيل'),
                     TextFieldAuth(
                       isPassword: false,
                       textInputType: TextInputType.name,
@@ -75,46 +77,70 @@ class RegisterScreen extends StatelessWidget {
                       icon: AppImage.phoneImg,
                     ),
                     SizedBox(
-                      height: 30.h,
+                      height: isSeller ? 15.h : 20.h,
                     ),
-                    const RulesWidget(),
+                    if (isSeller)
+                      TextFieldAuth(
+                        isPassword: false,
+                        textInputType: TextInputType.streetAddress,
+                        title: 'المدينة',
+                        icon: AppImage.locationImg,
+                      ),
+                    if (isSeller)
+                      SizedBox(
+                        height: 15.h,
+                      ),
+                    if (isSeller)
+                      TextFieldAuth(
+                        isPassword: false,
+                        textInputType: TextInputType.streetAddress,
+                        title: 'العنوان',
+                        icon: AppImage.locationImg,
+                      ),
+                    if (!isSeller) const RulesWidget(),
                     SizedBox(
                       height: 20.h,
                     ),
                     MainButton(
-                      title: 'تسجيل',
-                      function: () {},
+                      title: isSeller ? 'التالي' : 'تسجيل',
+                      function: ()
+                      {
+                        if(isSeller)
+                        {
+                          Get.to(const JoinAsStore(),);
+                        }
+
+                      },
                     ),
                     SizedBox(
                       height: 15.h,
                     ),
                     const NewAccountWidget(isLogin: false),
-                    SizedBox(
-                      height: 20.h,
-                    ),
-                    const DividerLogin(),
-                    SizedBox(
-                      height: 35.h,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        SizedBox(
-                          width: 191.w,
-                          height: 39.h,
-                          child: ListView.separated(
-                            scrollDirection: Axis.horizontal,
-                            itemBuilder: (context, index) {
-                              return SocialAccount(image: images[index]);
-                            },
-                            separatorBuilder: (context, index) => SizedBox(
-                              width: 10.w,
+                    if (!isSeller) const DividerLogin(),
+                    if (!isSeller)
+                      SizedBox(
+                        height: 35.h,
+                      ),
+                    if (!isSeller)
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 191.w,
+                            height: 39.h,
+                            child: ListView.separated(
+                              scrollDirection: Axis.horizontal,
+                              itemBuilder: (context, index) {
+                                return SocialAccount(image: images[index]);
+                              },
+                              separatorBuilder: (context, index) => SizedBox(
+                                width: 10.w,
+                              ),
+                              itemCount: 3,
                             ),
-                            itemCount: 3,
                           ),
-                        ),
-                      ],
-                    ),
+                        ],
+                      ),
                   ],
                 ),
               ),

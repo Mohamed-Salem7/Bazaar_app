@@ -16,6 +16,8 @@ class ChooseUser extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    AuthCubit.get(context).changeSelectUserSeller = false;
+    AuthCubit.get(context).changeSelectUserCustomer = false;
     List<String> title = ['تاجر', 'مشتري'];
     List<String> image = [AppImage.sallerImg, AppImage.customerImg];
 
@@ -51,10 +53,16 @@ class ChooseUser extends StatelessWidget {
                               if (index == 1) cubit.changeSelectUserCustomers();
 
 
-                              if((cubit.changeSelectUserCustomer && !cubit.changeSelectUserSeller) || (!cubit.changeSelectUserCustomer && cubit.changeSelectUserSeller))
+                              if((cubit.changeSelectUserCustomer && !cubit.changeSelectUserSeller))
                               {
                                 Get.back();
-                                Get.to(const  RegisterScreen());
+                                Get.to(const  RegisterScreen(isSeller: false));
+                              }
+
+                              if((!cubit.changeSelectUserCustomer && cubit.changeSelectUserSeller))
+                              {
+                                Get.back();
+                                Get.to(const  RegisterScreen(isSeller: true));
                               }
 
                             },

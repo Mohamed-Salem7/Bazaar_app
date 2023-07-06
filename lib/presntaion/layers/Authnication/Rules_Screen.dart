@@ -17,7 +17,7 @@ class RulesScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
           child: Column(
             children: [
-              const TitleWidget(title: 'الأحكام و الشروط'),
+              const TitleWidget(title: 'الأحكام و الشروط',isJoin: false),
               SizedBox(
                 height: 569.h,
                 child: SingleChildScrollView(

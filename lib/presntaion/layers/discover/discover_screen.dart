@@ -1,3 +1,4 @@
+import 'package:bazaar/controller/Auth/cubit.dart';
 import 'package:bazaar/presntaion/layers/discover/widget/Button_Login.dart';
 import 'package:bazaar/presntaion/layers/discover/widget/Button_Register.dart';
 import 'package:bazaar/presntaion/layers/discover/widget/Later_Register.dart';
@@ -22,6 +23,7 @@ class DiscoverScreen extends StatelessWidget {
         statusBarIconBrightness: Brightness.dark,
       ),
     );
+
     return Scaffold(
       backgroundColor: AppColor.white,
       body: Padding(

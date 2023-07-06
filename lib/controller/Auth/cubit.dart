@@ -35,6 +35,15 @@ class AuthCubit extends Cubit<AuthState> {
 
 
 
+  bool checkBox = false;
+
+  void changeCheckBox(value) {
+    checkBox = value;
+    emit(ChangeCheckBoxState());
+  }
+
+
+
   late PageController pageController;
 
   void changePageController(){

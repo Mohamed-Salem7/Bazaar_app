@@ -21,7 +21,7 @@ class ForgetScreen extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
-                const TitleWidget(title: 'نسيت كلمة المرور'),
+                const TitleWidget(title: 'نسيت كلمة المرور',isJoin: false),
                 SizedBox(
                   height: 15.h,
                 ),

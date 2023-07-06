@@ -4,10 +4,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TitleWidget extends StatelessWidget {
-  const TitleWidget({Key? key, required this.title}) : super(key: key);
+  const TitleWidget({Key? key, required this.title, required this.isJoin}) : super(key: key);
 
 
   final String title;
+  final bool isJoin;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -26,7 +27,7 @@ class TitleWidget extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: 60.w,
+              width: isJoin ?  80.w : 60.w,
             ),
             Center(
               child: Text(
