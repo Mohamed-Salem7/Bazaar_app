@@ -13,6 +13,13 @@ class AppImage {
   static const String googleImg = '$imgPath/google.png';
   static const String facebookImg = '$imgPath/facebook.png';
   static const String locationImg = '$imgPath/location.png';
+  static const String settingImg = '$imgPath/setting.png';
+  static const String editImg = '$imgPath/edit.png';
+  static const String orderImg = '$imgPath/order.png';
+  static const String paymentImg = '$imgPath/payment.png';
+  static const String helpImg = '$imgPath/help.png';
+  static const String bloggerImg = '$imgPath/blogger.png';
+  static const String addressImg = '$imgPath/address.png';
   static const String forgetImg = '$imgPath/forget.png';
   static const String backgroundImg = '$imgPath/background.png';
   static const String background2Img = '$imgPath/background2.png';
