@@ -1,8 +1,8 @@
-import 'package:bazaar/presntaion/layers/Authnication/widget/Title_Widget.dart';
+import 'package:bazaar/presntaion/utils/Global widget/Title_Widget.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
-import 'package:bazaar/presntaion/utils/component/Main_Button.dart';
-import 'package:bazaar/presntaion/utils/component/Text_field_auth.dart';
+import 'package:bazaar/presntaion/utils/Global%20widget/Main_Button.dart';
+import 'package:bazaar/presntaion/utils/Global%20widget/Text_field_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -21,7 +21,7 @@ class ForgetScreen extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
-                const TitleWidget(title: 'نسيت كلمة المرور',isJoin: false),
+                const TitleWidget(title: 'نسيت كلمة المرور',isEditProfile: false),
                 SizedBox(
                   height: 15.h,
                 ),

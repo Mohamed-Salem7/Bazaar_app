@@ -3,7 +3,7 @@ import 'package:bazaar/controller/Auth/state.dart';
 import 'package:bazaar/presntaion/layers/discover/discover_screen.dart';
 import 'package:bazaar/presntaion/layers/on_boarding/main_out_booarding.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
-import 'package:bazaar/presntaion/utils/component/component.dart';
+import 'package:bazaar/presntaion/utils/Global%20widget/component.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

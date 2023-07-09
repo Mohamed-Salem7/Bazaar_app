@@ -1,6 +1,6 @@
-import 'package:bazaar/presntaion/layers/Authnication/widget/Title_Widget.dart';
+import 'package:bazaar/presntaion/utils/Global widget/Title_Widget.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
-import 'package:bazaar/presntaion/utils/component/Main_Button.dart';
+import 'package:bazaar/presntaion/utils/Global%20widget/Main_Button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,7 +17,7 @@ class RulesScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
           child: Column(
             children: [
-              const TitleWidget(title: 'الأحكام و الشروط',isJoin: false),
+              const TitleWidget(title: 'الأحكام و الشروط',isEditProfile: false),
               SizedBox(
                 height: 569.h,
                 child: SingleChildScrollView(
