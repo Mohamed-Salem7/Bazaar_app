@@ -10,7 +10,7 @@ class TimeStore extends StatelessWidget {
     return Row(
       children: [
         SizedBox(
-          width: 96.w,
+          width: 98.w,
           height: 17.h,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -36,7 +36,7 @@ class TimeStore extends StatelessWidget {
           width: 15.w,
         ),
         SizedBox(
-          width: 72.w,
+          width: 76.w,
           height: 17.h,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

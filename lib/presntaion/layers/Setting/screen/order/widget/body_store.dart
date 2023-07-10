@@ -29,10 +29,10 @@ class BodyStore extends StatelessWidget {
         ),
         child: Padding(
           padding:
-          EdgeInsets.only(top: 15.h, right: 10.w,left: 10.w),
+          EdgeInsets.only(top: 15.h),
           child:  Row(
             children: [
-              const PhotoStore(),
+               PhotoStore(),
               InfoStore(index: index,),
             ],
           ),

@@ -20,7 +20,7 @@ class NameStore extends StatelessWidget {
                 color: AppColor.black,
                 letterSpacing: -0.6428571624755859,
                 fontWeight: FontWeight.w700,
-                height: 1.06,
+                height: 1.06.h,
               ),
             ),
             SizedBox(
@@ -49,7 +49,7 @@ class NameStore extends StatelessWidget {
               ),
             ),
             SizedBox(
-              width: 98.w,
+              width: 112.w,
               height: 21.h,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,

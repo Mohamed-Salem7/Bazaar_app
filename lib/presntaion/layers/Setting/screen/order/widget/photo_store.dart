@@ -8,6 +8,9 @@ class PhotoStore extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        SizedBox(
+          width: 5.w,
+        ),
         Column(
           children: [
             SizedBox(
