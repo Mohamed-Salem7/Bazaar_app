@@ -1,4 +1,5 @@
 import 'package:bazaar/controller/Auth/cubit.dart';
+import 'package:bazaar/controller/setting/cubit.dart';
 import 'package:bazaar/presntaion/layers/Setting/Setting_Screen.dart';
 import 'package:bazaar/presntaion/layers/discover/discover_screen.dart';
 import 'package:bazaar/presntaion/layers/splash/splash_screen.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => AuthCubit()),
+        BlocProvider(create: (context) => SettingCubit()),
       ],
       child: ScreenUtilInit(
           designSize: const Size(360, 780),

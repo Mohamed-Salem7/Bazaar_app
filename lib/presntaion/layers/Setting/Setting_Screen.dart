@@ -1,5 +1,6 @@
 import 'package:bazaar/presntaion/layers/Setting/screen/Edit_Profile/edit_profile.dart';
 import 'package:bazaar/presntaion/layers/Setting/screen/order/order_screen.dart';
+import 'package:bazaar/presntaion/layers/Setting/screen/shipping_addresses/shipping_addresses_screen.dart';
 import 'package:bazaar/presntaion/layers/Setting/widget/app_bar_setting.dart';
 import 'package:bazaar/presntaion/layers/Setting/widget/element_setting.dart';
 import 'package:bazaar/presntaion/layers/Setting/widget/logout_button.dart';
@@ -42,7 +43,10 @@ class SettingScreen extends StatelessWidget {
       {
         Get.to(const OrderScreen(), transition: Transition.rightToLeft);
       },
-      () {},
+      ()
+      {
+        Get.to(const ShippingAddresses(), transition: Transition.rightToLeft);
+      },
       () {},
       () {},
       () {},

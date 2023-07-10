@@ -20,6 +20,8 @@ class AppImage {
   static const String helpImg = '$imgPath/help.png';
   static const String bloggerImg = '$imgPath/blogger.png';
   static const String addressImg = '$imgPath/address.png';
+  static const String shippingAddressImg = '$imgPath/shipping_address.png';
+  static const String editAddressImg = '$imgPath/edit_address.png';
   static const String forgetImg = '$imgPath/forget.png';
   static const String backgroundImg = '$imgPath/background.png';
   static const String background2Img = '$imgPath/background2.png';

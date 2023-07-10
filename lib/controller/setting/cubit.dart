@@ -9,6 +9,13 @@ class SettingCubit extends Cubit<SettingState> {
   static SettingCubit get(context) => BlocProvider.of(context);
 
 
+  bool isCheck = false;
+
+  void changeStateCheck()
+  {
+    isCheck = !isCheck;
+    emit(ChangeCheckAddressState());
+  }
 
 
 }
