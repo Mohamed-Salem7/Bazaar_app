@@ -7,20 +7,21 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class InfoStore extends StatelessWidget {
-  const InfoStore({Key? key}) : super(key: key);
+  const InfoStore({Key? key, required this.index}) : super(key: key);
 
+  final int index;
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
           children: [
-            NameStore(),
-            DetailsButton(),
+            const NameStore(),
+            DetailsButton(index: index,),
           ],
         ),
-        TimeStore(),
+        const TimeStore(),
       ],
     );
   }

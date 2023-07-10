@@ -5,8 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BodyStore extends StatelessWidget {
-  const BodyStore({Key? key}) : super(key: key);
+  const BodyStore({Key? key, required this.index}) : super(key: key);
 
+  final int index;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -29,10 +30,10 @@ class BodyStore extends StatelessWidget {
         child: Padding(
           padding:
           EdgeInsets.only(top: 15.h, right: 10.w,left: 10.w),
-          child: const Row(
+          child:  Row(
             children: [
-              PhotoStore(),
-              InfoStore(),
+              const PhotoStore(),
+              InfoStore(index: index,),
             ],
           ),
         ),

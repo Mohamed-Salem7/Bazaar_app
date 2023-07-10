@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DetailsButton extends StatelessWidget {
-  const DetailsButton({Key? key}) : super(key: key);
+  const DetailsButton({Key? key, required this.index}) : super(key: key);
+
+  final int index;
 
   @override
   Widget build(BuildContext context) {
@@ -15,10 +17,10 @@ class DetailsButton extends StatelessWidget {
           height: 28.h,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(26.r),
-            color: AppColor.mainColor,
+            color: index == 0 ? AppColor.mainColor : (index == 1 ? Colors.grey.shade400 : Colors.green),
           ),
           child: Text(
-            'قيد الانتظار',
+            index == 0 ? 'قيد الانتظار' : (index == 1 ? 'حالية':'مكتملة'),
             style: TextStyle(
               fontFamily: 'SF Display',
               fontSize: 14.sp,

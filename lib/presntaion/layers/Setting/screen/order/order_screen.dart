@@ -30,17 +30,17 @@ class OrderScreen extends StatelessWidget {
                       ListView.builder(
                         itemCount: 4,
                         physics: const BouncingScrollPhysics(),
-                        itemBuilder: (context, index) => const BodyStore(),
+                        itemBuilder: (context, index) =>  BodyStore(index: 0,),
                       ),
                       ListView.builder(
                         itemCount: 4,
                         physics: const BouncingScrollPhysics(),
-                        itemBuilder: (context, index) => const BodyStore(),
+                        itemBuilder: (context, index) => BodyStore(index: 1,),
                       ),
                       ListView.builder(
                         itemCount: 4,
                         physics: const BouncingScrollPhysics(),
-                        itemBuilder: (context, index) => const BodyStore(),
+                        itemBuilder: (context, index) => BodyStore(index: 2,),
                       ),
                     ],
                   ),
