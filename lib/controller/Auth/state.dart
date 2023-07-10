@@ -14,3 +14,7 @@ class ChangeSelectUserCustomerState extends AuthState{}
 
 
 class ChangePageNumber extends AuthState{}
+
+class ChangeColor extends AuthState{}
+
+class ChangeTabShapeValue extends AuthState{}

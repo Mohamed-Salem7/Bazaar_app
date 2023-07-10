@@ -28,4 +28,17 @@ class AppImage {
   static const String onBoarding1 = '$imgPath/onboarding1.png';
   static const String onBoarding2 = '$imgPath/onboarding2.png';
   static const String onBoarding3 = '$imgPath/onboarding3.png';
+  static const String filter = '$imgPath/Iconly-Light-Filter.png';
+  static const String slider = '$imgPath/Slider1.png';
+  static const String homeList = '$imgPath/homelist.png';
+  static const String homegird = '$imgPath/homegrid.png';
+  static const String heart = '$imgPath/Heart.png';
+  static const String iconlyLightStar = '$imgPath/Iconly-Light-Star.png';
+  static const String secondListView = '$imgPath/second_list_view.png';
+  static const String ekssuar = '$imgPath/ekssuar.png';
+  static const String handing = '$imgPath/handing.png';
+  static const String hanging = '$imgPath/hanging.png';
+  static const String clothes = '$imgPath/clothes.png';
+  static const String showtab = '$imgPath/showtab.png';
+
 }
