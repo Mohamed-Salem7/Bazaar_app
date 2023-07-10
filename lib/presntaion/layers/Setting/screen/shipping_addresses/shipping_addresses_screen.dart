@@ -1,3 +1,4 @@
+import 'package:bazaar/presntaion/layers/Setting/screen/shipping_addresses/add_new_address.dart';
 import 'package:bazaar/presntaion/layers/Setting/screen/shipping_addresses/widget/Box_Address.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/Main_Button.dart';
@@ -5,6 +6,7 @@ import 'package:bazaar/presntaion/utils/Global%20widget/Secondry_Button.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/Title_Widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ShippingAddresses extends StatelessWidget {
@@ -16,7 +18,7 @@ class ShippingAddresses extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         body: Padding(
-          padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 0.w),
+          padding: EdgeInsets.symmetric(vertical: 10.h,),
           child: Column(
             children: [
               const TitleWidget(
@@ -29,7 +31,10 @@ class ShippingAddresses extends StatelessWidget {
               ),
               SecondaryButton(
                 title: 'إضافة عنوان جديد +',
-                function: () {},
+                function: ()
+                {
+                  Get.to(const AddNewAddress(),transition: Transition.rightToLeft);
+                },
               ),
               MainButton(title: 'متابعة', function: () {}),
             ],
