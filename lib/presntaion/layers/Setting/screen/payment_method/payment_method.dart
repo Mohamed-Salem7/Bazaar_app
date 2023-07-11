@@ -142,7 +142,7 @@ class PaymentMethod extends StatelessWidget {
                         child:   EntryInfoVisa(title: 'تاريخ الإنتهاء',hintText:   '               YYYY',isDate: true,hintText2: '   DD - MM',isSecure: false),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 10.h,bottom: 10.h),
+                        padding: EdgeInsets.only(top: 10.h,bottom: 30.h),
                         child:  EntryInfoVisa(title: 'رمز الحماية',hintText: ' 0000',isDate: false,isSecure: true),
                       ),
                       MainButton(title: 'متابعة', function: (){},),
