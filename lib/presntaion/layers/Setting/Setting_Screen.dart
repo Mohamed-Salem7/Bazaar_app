@@ -1,6 +1,7 @@
 import 'package:bazaar/presntaion/layers/Setting/screen/Edit_Profile/edit_profile.dart';
 import 'package:bazaar/presntaion/layers/Setting/screen/contact_us/contact_us_screen.dart';
 import 'package:bazaar/presntaion/layers/Setting/screen/order/order_screen.dart';
+import 'package:bazaar/presntaion/layers/Setting/screen/payment_method/payment_method.dart';
 import 'package:bazaar/presntaion/layers/Setting/screen/shipping_addresses/shipping_addresses_screen.dart';
 import 'package:bazaar/presntaion/layers/Setting/widget/app_bar_setting.dart';
 import 'package:bazaar/presntaion/layers/Setting/widget/element_setting.dart';
@@ -48,8 +49,14 @@ class SettingScreen extends StatelessWidget {
       {
         Get.to(const ShippingAddresses(), transition: Transition.rightToLeft);
       },
-      () {},
-      () {},
+      ()
+      {
+        //Get.to(const ContactUsScreen(), transition: Transition.rightToLeft);
+      },
+      ()
+      {
+        Get.to(const PaymentMethod(), transition: Transition.rightToLeft);
+      },
       ()
       {
         Get.to(const ContactUsScreen(), transition: Transition.rightToLeft);

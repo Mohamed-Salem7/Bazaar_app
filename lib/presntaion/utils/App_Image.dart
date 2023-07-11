@@ -18,6 +18,15 @@ class AppImage {
   static const String editImg = '$imgPath/edit.png';
   static const String orderImg = '$imgPath/order.png';
   static const String paymentImg = '$imgPath/payment.png';
+  static const String cardImg = '$imgPath/card.png';
+  static const String card2Img = '$imgPath/card2.png';
+  static const String logoVisaImg = '$imgPath/logovisa.png';
+  static const String visasImg = '$imgPath/visas.png';
+  static const String visaunImg = '$imgPath/visaun.png';
+  static const String cashsImg = '$imgPath/cashs.png';
+  static const String cashunImg = '$imgPath/cashun.png';
+  static const String paypalsImg = '$imgPath/paypals.png';
+  static const String paypalunImg = '$imgPath/paypalun.png';
   static const String helpImg = '$imgPath/help.png';
   static const String bloggerImg = '$imgPath/blogger.png';
   static const String addressImg = '$imgPath/address.png';
