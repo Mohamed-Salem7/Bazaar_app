@@ -31,13 +31,13 @@ class MainScreen extends StatelessWidget {
                 SalomonBottomBarItem(
                   icon: cubit.currentIndex == 0
                       ? Image(
-                          image: const AssetImage(AppImage.homeSelImg),
-                          height: 15.h,
+                          image: const AssetImage(AppImage.homeUnSelImg),
+                          height: 20.h,
                           width: 18.w,
                         )
                       : Image(
-                          image: const AssetImage(AppImage.homeUnSelImg),
-                          height: 15.h,
+                          image: const AssetImage(AppImage.homeSelImg),
+                          height: 20.h,
                           width: 18.w,
                         ),
                   title: Text(
@@ -57,12 +57,12 @@ class MainScreen extends StatelessWidget {
                   icon: cubit.currentIndex == 1
                       ? Image(
                           image: const AssetImage(AppImage.checkoutSelImg),
-                          height: 15.h,
+                          height: 20.h,
                           width: 18.w,
                         )
                       : Image(
                           image: const AssetImage(AppImage.checkoutUnSelImg),
-                          height: 15.h,
+                          height: 20.h,
                           width: 18.w,
                         ),
                   title: Text(
@@ -81,7 +81,7 @@ class MainScreen extends StatelessWidget {
                 SalomonBottomBarItem(
                   icon: Image(
                     image: const AssetImage(AppImage.storeImg),
-                    height: 15.h,
+                    height: 20.h,
                     width: 18.w,
                   ),
                   title: Text(
@@ -101,12 +101,12 @@ class MainScreen extends StatelessWidget {
                   icon: cubit.currentIndex == 3
                       ? Image(
                           image: const AssetImage(AppImage.favoriteSelImg),
-                          height: 15.h,
+                          height: 20.h,
                           width: 18.w,
                         )
                       : Image(
                           image: const AssetImage(AppImage.favoriteUnSelImg),
-                          height: 15.h,
+                          height: 20.h,
                           width: 18.w,
                         ),
                   title: Text(
