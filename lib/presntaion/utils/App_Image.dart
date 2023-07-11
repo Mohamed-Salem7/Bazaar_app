@@ -2,6 +2,7 @@ const String imgPath = 'assets/images';
 class AppImage {
   static const String splashLightImg = '$imgPath/splash.png';
   static const String logoImg = '$imgPath/Logo2.png';
+  static const String iconImg = '$imgPath/icon.png';
   static const String logo2Img = '$imgPath/logos.png';
   static const String customerImg = '$imgPath/customer.png';
   static const String sallerImg = '$imgPath/saller.png';
@@ -28,6 +29,13 @@ class AppImage {
   static const String onBoarding1 = '$imgPath/onboarding1.png';
   static const String onBoarding2 = '$imgPath/onboarding2.png';
   static const String onBoarding3 = '$imgPath/onboarding3.png';
+  static const String homeSelImg = '$imgPath/homeun.png';
+  static const String homeUnSelImg = '$imgPath/homes.png';
+  static const String checkoutSelImg = '$imgPath/checkouts.png';
+  static const String checkoutUnSelImg = '$imgPath/checkoutun.png';
+  static const String favoriteSelImg = '$imgPath/favorites.png';
+  static const String favoriteUnSelImg = '$imgPath/favoriteun.png';
+  static const String storeImg = '$imgPath/store.png';
   static const String filter = '$imgPath/Iconly-Light-Filter.png';
   static const String slider = '$imgPath/Slider1.png';
   static const String homeList = '$imgPath/homelist.png';

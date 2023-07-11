@@ -1,9 +1,12 @@
 import 'dart:async';
 
 
+import 'package:bazaar/presntaion/layers/discover/discover_screen.dart';
 import 'package:bazaar/presntaion/layers/on_boarding/main_out_booarding.dart';
 import 'package:bazaar/presntaion/layers/splash/widget/splash_icon.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
+import 'package:bazaar/presntaion/utils/Global%20widget/constant.dart';
+import 'package:bazaar/presntaion/utils/network/local/cashe_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -27,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   _goNext() {
-    Get.to( OutBoardingScreen(),transition: Transition.cupertinoDialog,);
+    Get.to(isBoarding? (DiscoverScreen()) : OutBoardingScreen(),transition: Transition.cupertinoDialog,);
   }
 
   @override

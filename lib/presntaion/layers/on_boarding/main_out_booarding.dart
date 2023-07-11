@@ -5,6 +5,8 @@ import 'package:bazaar/presntaion/layers/on_boarding/widget/Skip_Button.dart';
 import 'package:bazaar/presntaion/layers/on_boarding/widget/page_view_child.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
+import 'package:bazaar/presntaion/utils/Global%20widget/constant.dart';
+import 'package:bazaar/presntaion/utils/network/local/cashe_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,10 +25,9 @@ class OutBoardingScreen extends StatefulWidget {
 class _OutBoardingScreenState extends State<OutBoardingScreen> {
 
   @override
-  void initState() {
+  void initState(){
     super.initState();
     AuthCubit.get(context).changePageController();
-
   }
 
   @override
@@ -39,6 +40,7 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit,AuthState>(
       builder:(context,state) {
+        CacheHelper.saveData(key: 'isBoarding', value: true);
         SystemChrome.setSystemUIOverlayStyle(
           const SystemUiOverlayStyle(
             statusBarColor: Colors.transparent,

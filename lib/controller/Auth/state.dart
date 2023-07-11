@@ -18,3 +18,6 @@ class ChangePageNumber extends AuthState{}
 class ChangeColor extends AuthState{}
 
 class ChangeTabShapeValue extends AuthState{}
+
+
+class SelectBoardingAuthState extends AuthState{}

@@ -1,5 +1,7 @@
 import 'package:bazaar/controller/Auth/state.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
+import 'package:bazaar/presntaion/utils/Global%20widget/constant.dart';
+import 'package:bazaar/presntaion/utils/network/local/cashe_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -51,6 +53,9 @@ class AuthCubit extends Cubit<AuthState> {
     pageController = PageController();
     emit(ChangePageNumber());
   }
+
+
+
 
 
 

@@ -1,6 +1,7 @@
 import 'package:bazaar/controller/Auth/cubit.dart';
 import 'package:bazaar/controller/Auth/state.dart';
 import 'package:bazaar/presntaion/layers/Authnication/Rules_Screen.dart';
+import 'package:bazaar/presntaion/layers/main_screen/main_screen.dart';
 import 'package:bazaar/presntaion/utils/Global widget/Title_Widget.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/brief_field.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/check_widget.dart';
@@ -9,6 +10,7 @@ import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/Main_Button.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/Text_field_auth.dart';
+import 'package:bazaar/presntaion/utils/Global%20widget/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,7 +35,8 @@ class JoinAsStore extends StatelessWidget {
                       EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
                   child: Column(
                     children: [
-                      const TitleWidget(title: 'إنضم كمتجر', isEditProfile: false),
+                      const TitleWidget(
+                          title: 'إنضم كمتجر', isEditProfile: false),
                       const LogoStore(),
                       SizedBox(
                         height: 30.h,
@@ -55,7 +58,12 @@ class JoinAsStore extends StatelessWidget {
                       SizedBox(
                         height: 15.h,
                       ),
-                      MainButton(title: 'إنضمام', function: () {}),
+                      MainButton(
+                        title: 'إنضمام',
+                        function: () {
+                          Get.to(const MainScreen(), transition: transition[0]);
+                        },
+                      ),
                     ],
                   ),
                 ),
