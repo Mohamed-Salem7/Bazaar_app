@@ -29,6 +29,9 @@ class AppImage {
   static const String onBoarding1 = '$imgPath/onboarding1.png';
   static const String onBoarding2 = '$imgPath/onboarding2.png';
   static const String onBoarding3 = '$imgPath/onboarding3.png';
+  static const String phonesImg = '$imgPath/phones.png';
+  static const String emailsImg = '$imgPath/emailc.png';
+  static const String locationsImg = '$imgPath/locationc.png';
   static const String homeSelImg = '$imgPath/homeun.png';
   static const String homeUnSelImg = '$imgPath/homes.png';
   static const String checkoutSelImg = '$imgPath/checkouts.png';

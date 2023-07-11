@@ -1,4 +1,5 @@
 import 'package:bazaar/presntaion/layers/Setting/screen/Edit_Profile/edit_profile.dart';
+import 'package:bazaar/presntaion/layers/Setting/screen/contact_us/contact_us_screen.dart';
 import 'package:bazaar/presntaion/layers/Setting/screen/order/order_screen.dart';
 import 'package:bazaar/presntaion/layers/Setting/screen/shipping_addresses/shipping_addresses_screen.dart';
 import 'package:bazaar/presntaion/layers/Setting/widget/app_bar_setting.dart';
@@ -31,7 +32,7 @@ class SettingScreen extends StatelessWidget {
       'الطلبات',
       'عناوين الشحن',
       'المدونة',
-      'طرق الدفعة',
+      'طرق الدفع',
       'تواصل معنا',
     ];
 
@@ -49,7 +50,10 @@ class SettingScreen extends StatelessWidget {
       },
       () {},
       () {},
-      () {},
+      ()
+      {
+        Get.to(const ContactUsScreen(), transition: Transition.rightToLeft);
+      },
     ];
 
     return Directionality(
