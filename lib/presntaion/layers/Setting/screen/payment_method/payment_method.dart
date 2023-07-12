@@ -40,6 +40,7 @@ class PaymentMethod extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+        appBar: TitleWidget(title: 'طرق الدفع', isEditProfile: false,context: context),
         body: Padding(
           padding: EdgeInsets.symmetric(vertical: 10.h),
           child: SingleChildScrollView(
@@ -47,7 +48,7 @@ class PaymentMethod extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const TitleWidget(title: 'طرق الدفع', isEditProfile: false),
+
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 15.w),
                   child: Column(

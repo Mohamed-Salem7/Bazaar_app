@@ -3,45 +3,38 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class TitleWidget extends StatelessWidget {
-  const TitleWidget({
-    Key? key,
-    required this.title,
-    required this.isEditProfile,
-  }) : super(key: key);
-
-  final String title;
-  final bool isEditProfile;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.symmetric(vertical: 20.h),
-      child: Row(
-        children: [
-          IconButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            icon: const Icon(
-              Icons.arrow_back_ios,
-            ),
-          ),
-          Expanded(
-            child: Center(
-              child: Text(
-                title,
-                style: GoogleFonts.tajawal(
-                  fontSize: 16.spMax,
-                  color: AppColor.black,
-                  letterSpacing: -0.5714285888671875.spMin,
-                  height: 2.19.h,
-                ),
-                //textAlign: TextAlign.center,
-              ),
-            ),
-          ),
-          if (isEditProfile)
+PreferredSizeWidget TitleWidget({
+  required String title,
+  required bool isEditProfile,
+  required BuildContext context,
+}) {
+  return AppBar(
+    title: Text(
+      title,
+      style: GoogleFonts.tajawal(
+        fontSize: 16.spMax,
+        color: AppColor.black,
+        letterSpacing: -0.5714285888671875.spMin,
+        height: 2.19.h,
+      ),
+      //textAlign: TextAlign.center,
+    ),
+    centerTitle: true,
+    backgroundColor: AppColor.white9,
+    leading: IconButton(
+      onPressed: ()
+      {
+        Navigator.pop(context);
+      },
+      icon: Icon(
+        Icons.arrow_back_ios,
+        color: AppColor.black,
+        size: 20.spMin,
+      ),
+    ),
+    elevation: 0,
+    actions: isEditProfile
+        ? [
             TextButton(
               onPressed: () {},
               child: Text(
@@ -54,9 +47,8 @@ class TitleWidget extends StatelessWidget {
                   height: 1.06,
                 ),
               ),
-            ),
-        ],
-      ),
-    );
-  }
+            )
+          ]
+        : null,
+  );
 }

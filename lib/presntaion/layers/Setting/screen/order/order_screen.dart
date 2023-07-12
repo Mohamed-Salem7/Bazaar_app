@@ -18,11 +18,12 @@ class OrderScreen extends StatelessWidget {
       child: DefaultTabController(
         length: 3,
         child: Scaffold(
+          appBar: TitleWidget(title: 'الطلبات', isEditProfile: false,context: context),
           body: Padding(
             padding: EdgeInsets.symmetric(vertical: 10.h),
             child: Column(
               children: [
-                const TitleWidget(title: 'الطلبات', isEditProfile: false),
+
                 const TabBarOrder(),
                 Expanded(
                   child: TabBarView(

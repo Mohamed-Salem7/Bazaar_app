@@ -13,11 +13,12 @@ class RulesScreen extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+        appBar: TitleWidget(title: 'الأحكام و الشروط',isEditProfile: false,context: context),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
           child: Column(
             children: [
-              const TitleWidget(title: 'الأحكام و الشروط',isEditProfile: false),
+
               SizedBox(
                 height: 569.h,
                 child: SingleChildScrollView(

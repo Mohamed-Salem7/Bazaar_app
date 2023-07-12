@@ -28,13 +28,14 @@ class ContactUsScreen extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+        appBar: TitleWidget(title: 'تواصل معنا', isEditProfile: false,context: context),
         body: Padding(
           padding: EdgeInsets.symmetric(vertical: 10.h),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
-                const TitleWidget(title: 'تواصل معنا', isEditProfile: false),
+
                 SizedBox(
                   height: 160.h,
                   width: 226.w,

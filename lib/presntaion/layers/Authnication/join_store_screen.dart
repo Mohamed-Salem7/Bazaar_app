@@ -28,6 +28,8 @@ class JoinAsStore extends StatelessWidget {
           builder: (context, state) {
             var cubit = AuthCubit.get(context);
             return Scaffold(
+              appBar:  TitleWidget(
+                  title: 'إنضم كمتجر', isEditProfile: false,context: context),
               body: SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),
                 child: Padding(
@@ -35,8 +37,7 @@ class JoinAsStore extends StatelessWidget {
                       EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
                   child: Column(
                     children: [
-                      const TitleWidget(
-                          title: 'إنضم كمتجر', isEditProfile: false),
+
                       const LogoStore(),
                       SizedBox(
                         height: 30.h,

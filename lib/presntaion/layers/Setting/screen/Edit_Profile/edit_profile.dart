@@ -32,12 +32,13 @@ class EditProfileScreen extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+        appBar: TitleWidget(
+            title: 'تعديل الملف الشخصي', isEditProfile: true,context: context),
         body: Padding(
           padding: EdgeInsets.symmetric(vertical: 10.h),
           child: Column(
             children: [
-              const TitleWidget(
-                  title: 'تعديل الملف الشخصي', isEditProfile: true),
+
               const EditPhoto(),
               Expanded(
                 child: ListView.builder(

@@ -31,13 +31,13 @@ class AddNewAddress extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+        appBar: TitleWidget(
+            title: 'إضافة عنوان جديد', isEditProfile: false,context: context),
         body: Padding(
           padding: EdgeInsets.symmetric(vertical: 10.h),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const TitleWidget(
-                  title: 'إضافة عنوان جديد', isEditProfile: false),
               SizedBox(
                 height: 550.h,
                 child: ListView.builder(

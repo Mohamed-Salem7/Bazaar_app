@@ -15,13 +15,13 @@ class ForgetScreen extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+        appBar: TitleWidget(title: 'نسيت كلمة المرور',isEditProfile: false,context: context),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(),
             child: Column(
               children: [
-                const TitleWidget(title: 'نسيت كلمة المرور',isEditProfile: false),
                 SizedBox(
                   height: 15.h,
                 ),

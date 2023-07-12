@@ -17,14 +17,15 @@ class ShippingAddresses extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+        appBar: TitleWidget(
+          title: 'عناوين الشحن',
+          isEditProfile: false,
+          context: context,
+        ),
         body: Padding(
           padding: EdgeInsets.symmetric(vertical: 10.h,),
           child: Column(
             children: [
-              const TitleWidget(
-                title: 'عناوين الشحن',
-                isEditProfile: false,
-              ),
               const BoxAddress(),
               SizedBox(
                 height: 20.h,
