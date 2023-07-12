@@ -1,6 +1,9 @@
 const String imgPath = 'assets/images';
 class AppImage {
   static const String splashLightImg = '$imgPath/splash.png';
+  static const String searchImg = '$imgPath/search.png';
+  static const String avatarImg = '$imgPath/avatar.png';
+  static const String storesImg = '$imgPath/store.png';
   static const String logoImg = '$imgPath/Logo2.png';
   static const String iconImg = '$imgPath/icon.png';
   static const String logo2Img = '$imgPath/logos.png';
@@ -16,6 +19,7 @@ class AppImage {
   static const String locationImg = '$imgPath/location.png';
   static const String settingImg = '$imgPath/setting.png';
   static const String editImg = '$imgPath/edit.png';
+  static const String productImg = '$imgPath/product.png';
   static const String orderImg = '$imgPath/order.png';
   static const String paymentImg = '$imgPath/payment.png';
   static const String cardImg = '$imgPath/card.png';
@@ -47,7 +51,7 @@ class AppImage {
   static const String checkoutUnSelImg = '$imgPath/checkoutun.png';
   static const String favoriteSelImg = '$imgPath/favorites.png';
   static const String favoriteUnSelImg = '$imgPath/favoriteun.png';
-  static const String storeImg = '$imgPath/store.png';
+  static const String storeImg = '$imgPath/stores.png';
   static const String filter = '$imgPath/Iconly-Light-Filter.png';
   static const String slider = '$imgPath/Slider1.png';
   static const String homeList = '$imgPath/homelist.png';
@@ -60,5 +64,6 @@ class AppImage {
   static const String hanging = '$imgPath/hanging.png';
   static const String clothes = '$imgPath/clothes.png';
   static const String showtab = '$imgPath/showtab.png';
+  static const String filterImg = '$imgPath/Filter.png';
 
 }
