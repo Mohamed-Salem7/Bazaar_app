@@ -10,6 +10,7 @@ import 'package:bazaar/presntaion/layers/main_screen/main_screen.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/Main_Button.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/Text_field_auth.dart';
+import 'package:bazaar/presntaion/utils/Global%20widget/component.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -60,7 +61,7 @@ class LoginScreen extends StatelessWidget {
                       title: 'تسجيل الدخول',
                       function: ()
                       {
-                        Get.to(const MainScreen(),transition: transition[0]);
+                        navigatorFinished(context,const MainScreen());
                       },
                     ),
                     const ForgetWidget(),
