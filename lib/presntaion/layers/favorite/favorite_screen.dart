@@ -1,18 +1,12 @@
 import 'package:bazaar/controller/main/cubit.dart';
 import 'package:bazaar/controller/main/state.dart';
-import 'package:bazaar/presntaion/layers/favorite/widget/background_widget.dart';
-import 'package:bazaar/presntaion/layers/favorite/widget/image_product.dart';
-import 'package:bazaar/presntaion/layers/favorite/widget/info_product.dart';
 import 'package:bazaar/presntaion/layers/favorite/widget/product.dart';
-import 'package:bazaar/presntaion/layers/favorite/widget/title_widget.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
-import 'package:bazaar/presntaion/utils/App_Image.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/app_bar.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../store/widget/body_store.dart';
