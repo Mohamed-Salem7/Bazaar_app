@@ -10,6 +10,7 @@ class AppImage {
   static const String customerImg = '$imgPath/customer.png';
   static const String sallerImg = '$imgPath/saller.png';
   static const String emailImg = '$imgPath/email.png';
+  static const String chatImg = '$imgPath/Chat.png';
   static const String personImg = '$imgPath/person.png';
   static const String visibilityImg = '$imgPath/visibility.png';
   static const String phoneImg = '$imgPath/phone.png';
@@ -53,6 +54,7 @@ class AppImage {
   static const String favoriteUnSelImg = '$imgPath/favoriteun.png';
   static const String storeImg = '$imgPath/stores.png';
   static const String filter = '$imgPath/Iconly-Light-Filter.png';
+  static const String filtersImg = '$imgPath/filters.png';
   static const String slider = '$imgPath/Slider1.png';
   static const String homeList = '$imgPath/homelist.png';
   static const String homegird = '$imgPath/homegrid.png';

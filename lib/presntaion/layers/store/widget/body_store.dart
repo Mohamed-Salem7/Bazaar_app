@@ -12,7 +12,7 @@ class BodyStore extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:EdgeInsets.only(bottom : 10.h),
+      padding: EdgeInsets.only(bottom: 10.h),
       child: SizedBox(
         width: 325.w,
         height: 185.h,
