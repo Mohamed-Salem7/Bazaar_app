@@ -1,22 +1,17 @@
 import 'package:bazaar/controller/Auth/cubit.dart';
 import 'package:bazaar/controller/Auth/state.dart';
-import 'package:bazaar/presntaion/layers/Authnication/Rules_Screen.dart';
 import 'package:bazaar/presntaion/layers/main_screen/main_screen.dart';
 import 'package:bazaar/presntaion/utils/Global widget/Title_Widget.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/brief_field.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/check_widget.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/logo_store.dart';
-import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/Main_Button.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/Text_field_auth.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/component.dart';
-import 'package:bazaar/presntaion/utils/Global%20widget/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class JoinAsStore extends StatelessWidget {
   const JoinAsStore({Key? key}) : super(key: key);

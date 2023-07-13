@@ -1,18 +1,12 @@
-import 'package:bazaar/presntaion/layers/Setting/screen/contact_us/widget/body.dart';
-import 'package:bazaar/presntaion/layers/Setting/screen/contact_us/widget/text_field_message.dart';
-import 'package:bazaar/presntaion/layers/Setting/screen/payment_method/widget/Info_widget.dart';
 import 'package:bazaar/presntaion/layers/Setting/screen/payment_method/widget/entry_info_visa.dart';
 import 'package:bazaar/presntaion/layers/Setting/screen/payment_method/widget/payment_widget.dart';
 import 'package:bazaar/presntaion/layers/Setting/screen/payment_method/widget/visa_widget.dart';
-import 'package:bazaar/presntaion/layers/Setting/screen/shipping_addresses/widget/text_field_address.dart';
-import 'package:bazaar/presntaion/layers/tab_bar_screen/tab_bar_screen.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/Main_Button.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/Title_Widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class PaymentMethod extends StatelessWidget {

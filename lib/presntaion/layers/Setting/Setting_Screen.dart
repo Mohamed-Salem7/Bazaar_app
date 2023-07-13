@@ -6,13 +6,11 @@ import 'package:bazaar/presntaion/layers/Setting/screen/shipping_addresses/shipp
 import 'package:bazaar/presntaion/layers/Setting/widget/app_bar_setting.dart';
 import 'package:bazaar/presntaion/layers/Setting/widget/element_setting.dart';
 import 'package:bazaar/presntaion/layers/Setting/widget/logout_button.dart';
-import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({Key? key}) : super(key: key);

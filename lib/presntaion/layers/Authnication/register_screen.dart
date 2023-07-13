@@ -6,20 +6,16 @@ import 'package:bazaar/presntaion/layers/Authnication/widget/New_Account.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/Rules_Widget.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/Social_Account.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/LogoAuth.dart';
-import 'package:bazaar/presntaion/layers/Authnication/widget/forget_widget.dart';
 import 'package:bazaar/presntaion/layers/Authnication/widget/login_text.dart';
 import 'package:bazaar/presntaion/layers/main_screen/main_screen.dart';
-import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/Main_Button.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/Text_field_auth.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/component.dart';
-import 'package:bazaar/presntaion/utils/Global%20widget/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({Key? key, required this.isSeller}) : super(key: key);

@@ -1,12 +1,9 @@
 import 'package:bazaar/presntaion/layers/Setting/screen/Edit_Profile/widget/city_text_field.dart';
 import 'package:bazaar/presntaion/layers/Setting/screen/Edit_Profile/widget/edit_photo.dart';
 import 'package:bazaar/presntaion/layers/Setting/widget/Text_Field.dart';
-import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/Global widget/Title_Widget.dart';
-import 'package:country_state_city_picker/country_state_city_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class EditProfileScreen extends StatelessWidget {
   const EditProfileScreen({Key? key}) : super(key: key);

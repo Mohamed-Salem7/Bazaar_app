@@ -3,15 +3,12 @@ import 'package:bazaar/controller/Auth/state.dart';
 import 'package:bazaar/presntaion/layers/on_boarding/widget/Next_Button.dart';
 import 'package:bazaar/presntaion/layers/on_boarding/widget/Skip_Button.dart';
 import 'package:bazaar/presntaion/layers/on_boarding/widget/page_view_child.dart';
-import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
-import 'package:bazaar/presntaion/utils/Global%20widget/constant.dart';
 import 'package:bazaar/presntaion/utils/network/local/cashe_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 
 class OutBoardingScreen extends StatefulWidget {
