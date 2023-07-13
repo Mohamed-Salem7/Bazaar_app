@@ -11,6 +11,8 @@ import 'package:bazaar/presntaion/layers/details_store/widget/app_bar.dart';
 import 'package:bazaar/presntaion/layers/details_store/widget/avatar_store.dart';
 import 'package:bazaar/presntaion/layers/details_store/widget/background_image_store.dart';
 import 'package:bazaar/presntaion/layers/details_store/widget/background_shadow_store.dart';
+import 'package:bazaar/presntaion/layers/details_store/widget/brief_body.dart';
+import 'package:bazaar/presntaion/layers/details_store/widget/brief_text.dart';
 import 'package:bazaar/presntaion/layers/details_store/widget/divaider_store.dart';
 import 'package:bazaar/presntaion/layers/details_store/widget/favorite_filter_button.dart';
 import 'package:bazaar/presntaion/layers/details_store/widget/indicator_store.dart';
@@ -71,10 +73,14 @@ class DetailsStoreScreen extends StatelessWidget {
                       physics: const BouncingScrollPhysics(),
                       padding: const EdgeInsets.all(0),
                       itemBuilder: (context, index) {
-                        return BodyRevision(index: index,);
+                        return BodyRevision(
+                          index: index,
+                        );
                       },
                     ),
                   ),
+                if (cubit.indexStore == 2)
+                 BriefBody(),
               ],
             ),
           );

@@ -67,5 +67,6 @@ class AppImage {
   static const String clothes = '$imgPath/clothes.png';
   static const String showtab = '$imgPath/showtab.png';
   static const String filterImg = '$imgPath/Filter.png';
+  static const String briefImg = '$imgPath/brief.png';
 
 }
