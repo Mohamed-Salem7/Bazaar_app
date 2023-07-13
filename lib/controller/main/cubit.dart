@@ -40,4 +40,26 @@ class MainCubit extends Cubit<MainState> {
     }
     emit(ChangeSelectScreenFavoriteState());
   }
+
+
+  int indexStore = 0;
+
+  void changeIndexStoreScreen(value)
+  {
+    if(value == 0) {
+      indexStore = 0;
+    }
+    if(value == 1)
+    {
+      indexStore = 1;
+    }
+    if(value == 2)
+    {
+      indexStore = 2;
+    }
+    emit(ChangeSelectScreenStoreState());
+  }
+
+
+
 }

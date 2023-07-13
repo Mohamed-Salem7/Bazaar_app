@@ -23,17 +23,17 @@ class GridViewHome extends StatelessWidget {
           itemCount: 8,
           itemBuilder: (BuildContext context, int index) {
             return Container(
-              alignment: Alignment(0.0, 0.09),
-              width: 165.0,
-              height: 210.0,
+              alignment: Alignment(0.w, 0.09.h),
+              width: 165.w,
+              height: 210.h,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8.0),
+                borderRadius: BorderRadius.circular(8.r),
                 color: AppColor.white,
                 boxShadow: [
                   BoxShadow(
-                    color: AppColor.black.withOpacity(0.05),
-                    offset: Offset(0, 6.0),
-                    blurRadius: 12.0,
+                    color: AppColor.black.withOpacity(0.05.spMin),
+                    offset: Offset(0.w, 6.h),
+                    blurRadius: 12.r,
                   ),
                 ],
               ),
@@ -47,21 +47,21 @@ class GridViewHome extends StatelessWidget {
                       children: [
                         Container(
                           alignment: Alignment.center,
-                          width: 153.0,
-                          height: 153.0,
+                          width: 140.w,
+                          height: 143.h,
                           decoration: BoxDecoration(
                             borderRadius:
-                            BorderRadius.circular(8.0),
+                            BorderRadius.circular(8.r),
                             color: Colors.grey[200],
                           ),
                           child: Container(
                             alignment: Alignment.center,
-                            width: 153.0,
-                            height: 153.0,
+                            width: 153.w,
+                            height: 153.h,
                             decoration: BoxDecoration(
                               borderRadius:
-                              BorderRadius.circular(8.0),
-                              image: DecorationImage(
+                              BorderRadius.circular(8.r),
+                              image: const DecorationImage(
                                 image: AssetImage(
                                     AppImage.homegird),
                                 fit: BoxFit.fill,
@@ -78,8 +78,8 @@ class GridViewHome extends StatelessWidget {
                     ),
                     Spacer(),
                     SizedBox(
-                      width: 145.0,
-                      height: 42.0,
+                      width: 140.w,
+                      height: 40.h,
                       child: Row(
                         children: <Widget>[
                           SingleChildScrollView(
@@ -90,23 +90,23 @@ class GridViewHome extends StatelessWidget {
                                 Text(
                                   'الاسم',
                                   style: GoogleFonts.roboto(
-                                    fontSize: 16.0,
+                                    fontSize: 16.spMin,
                                     color: AppColor.black,
                                     letterSpacing:
-                                    -0.5714285888671875,
+                                    -0.5714285888671875.spMin,
                                     fontWeight:
                                     FontWeight.w700,
-                                    height: 1.19,
+                                    height: 1.19.h,
                                   ),
                                 ),
                                 Text(
                                   '24.12\$',
                                   style: GoogleFonts.roboto(
-                                    fontSize: 12.0,
+                                    fontSize: 12.spMin,
                                     color: Colors.amber,
                                     letterSpacing:
-                                    -0.2894117660522461,
-                                    height: 1.83,
+                                    -0.2894117660522461.spMin,
+                                    height: 1.83.h,
                                   ),
                                 ),
                               ],
@@ -116,11 +116,11 @@ class GridViewHome extends StatelessWidget {
                           Text(
                             '4.9',
                             style: GoogleFonts.roboto(
-                              fontSize: 10.0,
+                              fontSize: 10.spMin,
                               color: AppColor.black,
                               letterSpacing:
-                              -0.3571428680419922,
-                              height: 1.9,
+                              -0.3571428680419922.spMin,
+                              height: 1.9.h,
                             ),
                           ),
                           Image.asset(AppImage.iconlyLightStar),

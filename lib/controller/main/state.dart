@@ -7,3 +7,6 @@ class ChangeSelectScreenState extends MainState{}
 
 
 class ChangeSelectScreenFavoriteState extends MainState{}
+
+
+class ChangeSelectScreenStoreState extends MainState{}
