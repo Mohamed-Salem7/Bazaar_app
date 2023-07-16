@@ -17,7 +17,7 @@ class StoreScreen extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsets.only(bottom: 15.h),
-              child: const SearchField(),
+              child:  const SearchField(isBlog: true),
             ),
             Expanded(
               child: Padding(

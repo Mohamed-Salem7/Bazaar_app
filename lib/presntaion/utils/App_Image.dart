@@ -68,5 +68,14 @@ class AppImage {
   static const String showtab = '$imgPath/showtab.png';
   static const String filterImg = '$imgPath/Filter.png';
   static const String briefImg = '$imgPath/brief.png';
+  static const String blogImg = '$imgPath/blog.png';
+  static const String blogCalendarImg = '$imgPath/Calendar.png';
+  static const String blogCalendar2Img = '$imgPath/Calendar2.png';
+  static const String blogCategoryImg = '$imgPath/Category.png';
+  static const String blogCategory2Img = '$imgPath/Category2.png';
+  static const String blogClothesImg = '$imgPath/blogClothes.png';
+  static const String postImg = '$imgPath/post.png';
+  static const String person2Img = '$imgPath/person2.png';
+  static const String location3Img = '$imgPath/Location3.png';
 
 }

@@ -1,3 +1,4 @@
+import 'package:bazaar/presntaion/layers/Setting/screen/Blog/blog_screen.dart';
 import 'package:bazaar/presntaion/layers/Setting/screen/Edit_Profile/edit_profile.dart';
 import 'package:bazaar/presntaion/layers/Setting/screen/contact_us/contact_us_screen.dart';
 import 'package:bazaar/presntaion/layers/Setting/screen/order/order_screen.dart';
@@ -49,7 +50,7 @@ class SettingScreen extends StatelessWidget {
       },
       ()
       {
-        //Get.to(const ContactUsScreen(), transition: Transition.rightToLeft);
+        Get.to(const BlogScreen(), transition: Transition.rightToLeft);
       },
       ()
       {
