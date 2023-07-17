@@ -21,41 +21,49 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding:  EdgeInsets.symmetric(vertical: 10.h),
+          padding: EdgeInsets.symmetric(vertical: 10.h),
           child: Stack(
-              alignment: AlignmentDirectional.center, children: [
-            CarouselSlider(
-              items: imageSliders,
-              carouselController: _controller,
-              options: CarouselOptions(
+            alignment: AlignmentDirectional.center,
+            children: [
+              CarouselSlider(
+                disableGesture: true,
+                items: imageSliders,
+                carouselController: _controller,
+                options: CarouselOptions(
+                  height: 167.h,
                   autoPlay: true,
                   enlargeCenterPage: true,
-                  aspectRatio: 1.7.h,
+                  aspectRatio: 1/0.13,
                   onPageChanged: (index, reason) {
                     setState(() {
                       _current = index;
                     });
-                  }),
-            ),
-            Positioned(
-              bottom: 28.h,
-              child: Row(
-                children: imgList.asMap().entries.map((entry) {
-                  return GestureDetector(
-                    onTap: () => _controller.animateToPage(entry.key),
-                    child: Container(
-                      width: 7.w,
-                      height: 7.h,
-                      margin: EdgeInsets.symmetric(vertical: 8.h, horizontal: 4.w),
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: _current == entry.key?AppColor.black:AppColor.white),
-                    ),
-                  );
-                }).toList(),
+                  },
+                ),
               ),
-            ),
-          ]),
+              Positioned(
+                bottom: 28.h,
+                child: Row(
+                  children: imgList.asMap().entries.map((entry) {
+                    return GestureDetector(
+                      onTap: () => _controller.animateToPage(entry.key),
+                      child: Container(
+                        width: 7.w,
+                        height: 7.h,
+                        margin: EdgeInsets.symmetric(
+                            vertical: 8.h, horizontal: 4.w),
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: _current == entry.key
+                                ? AppColor.black
+                                : AppColor.white),
+                      ),
+                    );
+                  }).toList(),
+                ),
+              ),
+            ],
+          ),
         ),
       ],
     );
@@ -63,12 +71,20 @@ class _CarouselWithIndicatorState extends State<CarouselWithIndicatorDemo> {
 }
 
 final List<Widget> imageSliders = imgList
-    .map((item) => Container(child: Image.asset(item,fit: BoxFit.contain)))
+    .map((item) => Container(
+          height: 167.h,
+          width: 343.w,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(item),
+              fit: BoxFit.cover,
+            ),
+          ),
+        ))
     .toList();
 
 final List<String> imgList = [
   AppImage.slider,
   AppImage.slider,
   AppImage.slider,
-
 ];

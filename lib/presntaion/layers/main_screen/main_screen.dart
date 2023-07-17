@@ -8,6 +8,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
+
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
 
@@ -19,8 +20,78 @@ class MainScreen extends StatelessWidget {
         return Directionality(
           textDirection: TextDirection.rtl,
           child: Scaffold(
-            body: cubit.screen[cubit.currentIndex],
-            bottomNavigationBar: SalomonBottomBar(
+            backgroundColor: AppColor.white9,
+            body: false ? cubit.screen[cubit.currentIndex] : cubit.screenSeller[cubit.currentIndex],
+            floatingActionButton:  true ? Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 15.w,vertical: 15.h),
+              child: FloatingActionButton(
+                child: Icon(Icons.add,size: 35.sp,),
+                hoverElevation: 10,
+                isExtended: true,
+                splashColor: AppColor.white9,
+                backgroundColor: AppColor.mainColor,
+                onPressed: () {},
+              ),
+            ) : null,
+            floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+            bottomNavigationBar: true ? BottomAppBar(
+              shape: const CircularNotchedRectangle(),
+              notchMargin: 0.1,
+              clipBehavior: Clip.antiAlias,
+              child: Container(
+                width: 375.w,
+                height: 70.h,
+                color: AppColor.white9,
+                child: BottomNavigationBar(
+                  selectedLabelStyle:  GoogleFonts.roboto(
+                    fontSize: 14.sp,
+                    letterSpacing: -0.5000000152587891.spMin,
+                    fontWeight: FontWeight.w500,
+                    color: AppColor.mainColor,
+                    height: 1.36.h,
+                  ),
+                  items: [
+                    BottomNavigationBarItem(
+                      icon: cubit.currentIndex == 0
+                          ? Image(
+                        image: const AssetImage(AppImage.homeUnSelImg),
+                        height: 20.h,
+                        width: 18.w,
+                      )
+                          : Image(
+                        image: const AssetImage(AppImage.homeSelImg),
+                        height: 20.h,
+                        width: 18.w,
+                      ),
+                      label:  "الرئيسية",
+
+                    ),
+                    BottomNavigationBarItem(
+                      icon: cubit.currentIndex == 1
+                          ? Image(
+                        image: const AssetImage(AppImage.notificationsImg),
+                        height: 20.h,
+                        width: 18.w,
+                      )
+                          : Image(
+                        image: const AssetImage(AppImage.notificationunImg),
+                        height: 20.h,
+                        width: 18.w,
+                      ),
+                      label:  "التنبيهات" ,
+                    ),
+                  ],
+                  useLegacyColorScheme: false,
+                  showUnselectedLabels: false,
+                  currentIndex: cubit.currentIndex,
+                  onTap: (index) {
+                    cubit.changeScreenSelect(index);
+                  },
+                ),
+              ),
+
+
+            ) : SalomonBottomBar(
               currentIndex: cubit.currentIndex,
               selectedColorOpacity: 0.6.spMin,
               onTap: (i) {

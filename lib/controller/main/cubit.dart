@@ -2,6 +2,7 @@ import 'package:bazaar/controller/main/state.dart';
 import 'package:bazaar/presntaion/layers/checkout/checkout_screen.dart';
 import 'package:bazaar/presntaion/layers/favorite/favorite_screen.dart';
 import 'package:bazaar/presntaion/layers/home_screen/main_home_screen.dart';
+import 'package:bazaar/presntaion/layers/notification/notification_screen.dart';
 import 'package:bazaar/presntaion/layers/store/store_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,6 +17,11 @@ class MainCubit extends Cubit<MainState> {
     const CheckOutScreen(),
     const StoreScreen(),
     const FavoriteScreen(),
+  ];
+
+  List<Widget> screenSeller = [
+    const MainHomeScreen(),
+    const NotificationScreen(),
   ];
 
   int currentIndex = 0;

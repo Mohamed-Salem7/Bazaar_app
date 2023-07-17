@@ -3,6 +3,8 @@ import 'package:bazaar/presntaion/layers/home_screen/widget/carousel_slider.dart
 import 'package:bazaar/presntaion/layers/home_screen/widget/grid_view_home.dart';
 import 'package:bazaar/presntaion/layers/home_screen/widget/list_view_home.dart';
 import 'package:bazaar/presntaion/layers/home_screen/widget/text_home_widget.dart';
+import 'package:bazaar/presntaion/layers/notification/notification_screen.dart';
+import 'package:bazaar/presntaion/layers/store/widget/search_field.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/component.dart';
@@ -49,21 +51,32 @@ class MainHomeScreen extends StatelessWidget {
             actions: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Center(
-                  child: Stack(
-                    alignment: Alignment.topRight,
-                    children: <Widget>[
-                      Icon(Icons.notifications_outlined,
-                          color: AppColor.black, size: 30.spMin),
-                      Container(
-                        width: 6.0,
-                        height: 6.0,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: const Color(0xFFFF0008),
+                child: GestureDetector(
+                  onTap: ()
+                  {
+                    Get.to(const NotificationScreen(),transition: transition[2],);
+                  },
+                  child: Center(
+                    child: Stack(
+                      alignment: Alignment.topRight,
+                      children: <Widget>[
+                        Image(
+                          image: AssetImage(
+                            AppImage.notificationunImg,
+                          ),
+                          height: 17.h,
+                          width: 21.w,
                         ),
-                      ),
-                    ],
+                        Container(
+                          width: 6.0,
+                          height: 6.0,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: const Color(0xFFFF0008),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -72,6 +85,10 @@ class MainHomeScreen extends StatelessWidget {
           body: SingleChildScrollView(
             child: Column(
               children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.w),
+                  child: const SearchField(isBlog: true),
+                ),
                 CarouselWithIndicatorDemo(),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20.w),
