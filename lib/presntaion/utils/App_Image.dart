@@ -79,5 +79,6 @@ class AppImage {
   static const String location3Img = '$imgPath/Location3.png';
   static const String notificationsImg = '$imgPath/notifications.png';
   static const String notificationunImg = '$imgPath/notificationun.png';
+  static const String percentImg = '$imgPath/%.png';
 
 }

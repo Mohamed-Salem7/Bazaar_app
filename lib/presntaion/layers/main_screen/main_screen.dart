@@ -1,10 +1,13 @@
 import 'package:bazaar/controller/main/cubit.dart';
 import 'package:bazaar/controller/main/state.dart';
+import 'package:bazaar/presntaion/layers/new_product/new_product_screen.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
+import 'package:bazaar/presntaion/utils/Global%20widget/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
@@ -30,7 +33,10 @@ class MainScreen extends StatelessWidget {
                 isExtended: true,
                 splashColor: AppColor.white9,
                 backgroundColor: AppColor.mainColor,
-                onPressed: () {},
+                onPressed: ()
+                {
+                  Get.to(const NewProductScreen(),transition: transition[0],);
+                },
               ),
             ) : null,
             floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
