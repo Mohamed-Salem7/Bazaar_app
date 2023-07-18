@@ -6,6 +6,7 @@ import 'package:bazaar/presntaion/layers/discover/discover_screen.dart';
 import 'package:bazaar/presntaion/layers/home_screen/main_home_screen.dart';
 import 'package:bazaar/presntaion/layers/splash/splash_screen.dart';
 import 'package:bazaar/presntaion/layers/tab_bar_screen/tab_bar_screen.dart';
+import 'package:bazaar/presntaion/layers/wallet/wallet_screen.dart';
 import 'package:bazaar/presntaion/utils/network/local/cashe_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -47,9 +48,9 @@ class MyApp extends StatelessWidget {
           splitScreenMode: true,
           builder: (context, child) {
             return const GetMaterialApp(
-              title: 'Attendance',
+              title: 'Bazaar',
               debugShowCheckedModeBanner: false,
-              home: SplashScreen(),
+              home: WalletScreen(),
             );
           }),
     );

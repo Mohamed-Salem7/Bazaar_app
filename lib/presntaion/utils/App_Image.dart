@@ -82,5 +82,8 @@ class AppImage {
   static const String percentImg = '$imgPath/%.png';
   static const String cameraImg = '$imgPath/Camera.png';
   static const String videoImg = '$imgPath/Video.png';
+  static const String wallet1Img = '$imgPath/wallet1.png';
+  static const String wallet2Img = '$imgPath/wallet2.png';
+  static const String logoWalletImg = '$imgPath/logoWallet.png';
 
 }
