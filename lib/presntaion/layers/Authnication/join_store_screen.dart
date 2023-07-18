@@ -60,6 +60,7 @@ class JoinAsStore extends StatelessWidget {
                         function: () {
                           navigatorFinished(context,const MainScreen());
                         },
+                        isNewProduct : false,
                       ),
                     ],
                   ),

@@ -35,7 +35,7 @@ class ShippingAddresses extends StatelessWidget {
                   Get.to(const AddNewAddress(),transition: Transition.rightToLeft);
                 },
               ),
-              MainButton(title: 'متابعة', function: () {}),
+              MainButton(title: 'متابعة', function: () {},isNewProduct : false,),
             ],
           ),
         ),

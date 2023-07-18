@@ -140,7 +140,7 @@ class PaymentMethod extends StatelessWidget {
                         padding: EdgeInsets.only(top: 10.h,bottom: 30.h),
                         child:  EntryInfoVisa(title: 'رمز الحماية',hintText: ' 0000',isDate: false,isSecure: true),
                       ),
-                      MainButton(title: 'متابعة', function: (){},),
+                      MainButton(title: 'متابعة', function: (){},isNewProduct : false,),
                     ],
                   ),
                 ),

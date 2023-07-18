@@ -38,7 +38,7 @@ class RulesScreen extends StatelessWidget {
               SizedBox(
                 height: 20.h,
               ),
-              MainButton(title: 'أوافق', function: ()
+              MainButton(isNewProduct: false,title: 'أوافق', function: ()
               {
                 Navigator.pop(context);
               }),

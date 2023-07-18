@@ -70,6 +70,7 @@ class ContactUsScreen extends StatelessWidget {
                 MainButton(
                   title: 'إرسال',
                   function: () {},
+                  isNewProduct : false,
                 ),
               ],
             ),

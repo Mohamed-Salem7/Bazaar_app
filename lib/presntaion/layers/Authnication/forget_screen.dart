@@ -50,6 +50,7 @@ class ForgetScreen extends StatelessWidget {
                 MainButton(
                   title: 'إرسال (25)',
                   function: () {},
+                  isNewProduct: false,
                 ),
                 SizedBox(
                   height: 20.h,

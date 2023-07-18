@@ -49,7 +49,7 @@ class AddNewAddress extends StatelessWidget {
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20.w),
-                child: MainButton(title: 'حفظ', function: () {}),
+                child: MainButton(title: 'حفظ', function: () {},isNewProduct : false,),
               ),
             ],
           ),

@@ -80,5 +80,7 @@ class AppImage {
   static const String notificationsImg = '$imgPath/notifications.png';
   static const String notificationunImg = '$imgPath/notificationun.png';
   static const String percentImg = '$imgPath/%.png';
+  static const String cameraImg = '$imgPath/Camera.png';
+  static const String videoImg = '$imgPath/Video.png';
 
 }

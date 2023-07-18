@@ -102,6 +102,7 @@ class RegisterScreen extends StatelessWidget {
                     ),
                     MainButton(
                       title: isSeller ? 'التالي' : 'تسجيل',
+                      isNewProduct : false,
                       function: ()
                       {
                         if(isSeller)

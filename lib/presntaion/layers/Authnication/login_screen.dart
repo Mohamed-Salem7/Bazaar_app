@@ -61,6 +61,7 @@ class LoginScreen extends StatelessWidget {
                       {
                         navigatorFinished(context,const MainScreen());
                       },
+                      isNewProduct : false,
                     ),
                     const ForgetWidget(),
                     const NewAccountWidget(isLogin: true),

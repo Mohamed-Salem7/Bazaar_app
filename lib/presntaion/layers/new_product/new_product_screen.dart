@@ -1,11 +1,14 @@
 import 'package:bazaar/presntaion/layers/Setting/screen/shipping_addresses/widget/text_field_address.dart';
+import 'package:bazaar/presntaion/layers/new_product/add_product.dart';
 import 'package:bazaar/presntaion/layers/new_product/widget/size_product.dart';
 import 'package:bazaar/presntaion/layers/new_product/widget/text_field.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/Main_Button.dart';
 import 'package:bazaar/presntaion/utils/Global%20widget/Title_Widget.dart';
+import 'package:bazaar/presntaion/utils/Global%20widget/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class NewProductScreen extends StatelessWidget {
@@ -111,9 +114,10 @@ class NewProductScreen extends StatelessWidget {
                             title: size[index],
                           );
                         },
-                        separatorBuilder: (context,index)
-                        {
-                          return SizedBox(width: 15.w,);
+                        separatorBuilder: (context, index) {
+                          return SizedBox(
+                            width: 15.w,
+                          );
                         },
                       ),
                     ),
@@ -121,8 +125,15 @@ class NewProductScreen extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 10.h,horizontal: 20.w),
-                child: MainButton(title: 'التالي',function: (){}),
+                padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 20.w),
+                child: MainButton(
+                  title: 'التالي',
+                  isNewProduct : true,
+                  function: ()
+                  {
+                    Get.to(const AddProduct(),transition: transition[1]);
+                  },
+                ),
               ),
             ],
           ),

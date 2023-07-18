@@ -96,7 +96,7 @@ class ChattingStore extends StatelessWidget {
                           ),
                           child: MainButton(
                             title: 'إرسال',
-                            function: () {},
+                            function: () {},isNewProduct : false,
                           ),
                         ),
                       ],
