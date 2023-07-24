@@ -1,4 +1,8 @@
 import 'package:bazaar/presntaion/layers/Setting/Setting_Screen.dart';
+import 'package:bazaar/presntaion/layers/drower/main_drawer.dart';
+import 'package:bazaar/presntaion/layers/drower/widget/box_name_widget.dart';
+import 'package:bazaar/presntaion/layers/drower/widget/box_num_widget.dart';
+import 'package:bazaar/presntaion/layers/drower/widget/list_tile_drawer.dart';
 import 'package:bazaar/presntaion/layers/home_screen/widget/carousel_slider.dart';
 import 'package:bazaar/presntaion/layers/home_screen/widget/grid_view_home.dart';
 import 'package:bazaar/presntaion/layers/home_screen/widget/list_view_home.dart';
@@ -20,9 +24,11 @@ class MainHomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
+
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             elevation: 0,
@@ -34,10 +40,11 @@ class MainHomeScreen extends StatelessWidget {
             toolbarHeight: 100.h,
             leading: GestureDetector(
               onTap: () {
-                Get.to(
-                  const SettingScreen(),
-                  transition: transition[0],
-                );
+                scaffoldKey.currentState!.openDrawer();
+                // Get.to(
+                //   const SettingScreen(),
+                //   transition: transition[0],
+                // );
               },
               child: Padding(
                 padding: const EdgeInsets.only(right: 20),
@@ -52,9 +59,11 @@ class MainHomeScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: GestureDetector(
-                  onTap: ()
-                  {
-                    Get.to(const NotificationScreen(),transition: transition[2],);
+                  onTap: () {
+                    Get.to(
+                      const NotificationScreen(),
+                      transition: transition[2],
+                    );
                   },
                   child: Center(
                     child: Stack(

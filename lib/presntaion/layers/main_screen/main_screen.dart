@@ -1,5 +1,6 @@
 import 'package:bazaar/controller/main/cubit.dart';
 import 'package:bazaar/controller/main/state.dart';
+import 'package:bazaar/presntaion/layers/drower/main_drawer.dart';
 import 'package:bazaar/presntaion/layers/new_product/new_product_screen.dart';
 import 'package:bazaar/presntaion/utils/App_Color.dart';
 import 'package:bazaar/presntaion/utils/App_Image.dart';
@@ -23,7 +24,9 @@ class MainScreen extends StatelessWidget {
         return Directionality(
           textDirection: TextDirection.rtl,
           child: Scaffold(
+            key: scaffoldKey,
             backgroundColor: AppColor.white9,
+            drawer: const DrawerSeller(),
             body: false ? cubit.screen[cubit.currentIndex] : cubit.screenSeller[cubit.currentIndex],
             floatingActionButton:  true ? Padding(
               padding:  EdgeInsets.symmetric(horizontal: 15.w,vertical: 15.h),

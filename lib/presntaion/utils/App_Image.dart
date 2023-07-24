@@ -66,6 +66,18 @@ class AppImage {
   static const String hanging = '$imgPath/hanging.png';
   static const String clothes = '$imgPath/clothes.png';
   static const String showtab = '$imgPath/showtab.png';
+  static const String bigItemDetails = '$imgPath/bigitemdetails.png';
+  static const String smallItemDetails = '$imgPath/smallitemdetalis.png';
+  static const String monaIcons = '$imgPath/monaicons.png';
+  static const String removeItem = '$imgPath/remove_item.png';
+  static const String drawer1 = '$imgPath/drawer1.png';
+  static const String drawer2 = '$imgPath/drawer2.png';
+  static const String drawer3 = '$imgPath/drawer3.png';
+  static const String drawer4 = '$imgPath/drawer4.png';
+  static const String drawer5 = '$imgPath/drawer5.png';
+  static const String drawer6 = '$imgPath/help.png';
+  static const String drawer7 = '$imgPath/Settings.png';
+  static const String off = '$imgPath/off.png';
   static const String filterImg = '$imgPath/Filter.png';
   static const String briefImg = '$imgPath/brief.png';
   static const String blogImg = '$imgPath/blog.png';
@@ -85,5 +97,4 @@ class AppImage {
   static const String wallet1Img = '$imgPath/wallet1.png';
   static const String wallet2Img = '$imgPath/wallet2.png';
   static const String logoWalletImg = '$imgPath/logoWallet.png';
-
 }

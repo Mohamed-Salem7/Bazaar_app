@@ -3,7 +3,10 @@ import 'package:bazaar/controller/main/cubit.dart';
 import 'package:bazaar/controller/setting/cubit.dart';
 import 'package:bazaar/presntaion/layers/Setting/Setting_Screen.dart';
 import 'package:bazaar/presntaion/layers/discover/discover_screen.dart';
+import 'package:bazaar/presntaion/layers/drower/main_drawer.dart';
 import 'package:bazaar/presntaion/layers/home_screen/main_home_screen.dart';
+import 'package:bazaar/presntaion/layers/item_details/item_details.dart';
+import 'package:bazaar/presntaion/layers/main_screen/main_screen.dart';
 import 'package:bazaar/presntaion/layers/splash/splash_screen.dart';
 import 'package:bazaar/presntaion/layers/tab_bar_screen/tab_bar_screen.dart';
 import 'package:bazaar/presntaion/layers/wallet/wallet_screen.dart';
@@ -13,6 +16,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
+import 'presntaion/layers/swipe_checkout/main_swipe_checkout.dart';
 import 'presntaion/utils/Global widget/constant.dart';
 
 Future<void> main() async {
@@ -50,7 +54,7 @@ class MyApp extends StatelessWidget {
             return const GetMaterialApp(
               title: 'Bazaar',
               debugShowCheckedModeBanner: false,
-              home: WalletScreen(),
+              home: MainScreen(),
             );
           }),
     );
