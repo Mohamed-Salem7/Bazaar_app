@@ -25,6 +25,7 @@ class MainScreen extends StatelessWidget {
           textDirection: TextDirection.rtl,
           child: Scaffold(
             key: scaffoldKey,
+            extendBody: true,
             backgroundColor: AppColor.white9,
             drawer: const DrawerSeller(),
             body: false ? cubit.screen[cubit.currentIndex] : cubit.screenSeller[cubit.currentIndex],
